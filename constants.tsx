@@ -1,7 +1,7 @@
 
 import { Project, ProjectCategory } from './types';
 
-// 航小鹿小程序图片导入
+// 航小鹭小程序图片导入
 import hxl1 from './assets/xcx/hxl/微信图片_20251204150054_336_6.jpg';
 import hxl2 from './assets/xcx/hxl/微信图片_20251204150056_337_6.jpg';
 import hxl3 from './assets/xcx/hxl/微信图片_20251204150058_338_6.jpg';
@@ -20,6 +20,10 @@ import xhs6 from './assets/xcx/xhs/微信图片_20250929000019_114_6.jpg';
 // 高考志愿通小程序图片导入
 import gkzyt1 from './assets/xcx/gkzyt/1.png';
 import gkzyt2 from './assets/xcx/gkzyt/2.png';
+// 还不知道吃什么小程序图片导入
+import hbzdcsm1 from './assets/xcx/hbzdcsm/微信图片_20251219094349_380_6.png';
+import hbzdcsm2 from './assets/xcx/hbzdcsm/微信图片_20251219094349_381_6.png';
+import hbzdcsm3 from './assets/xcx/hbzdcsm/微信图片_20251219094349_382_6.png';
 
 // Shopify 图片导入
 import carve1 from './assets/shopify/carve/1.png';
@@ -45,6 +49,8 @@ import yxt12 from './assets/h5/yxt/微信图片_20250429225045_484_7.jpg';
 import yxt13 from './assets/h5/yxt/微信图片_20250429225324_483_7.jpg';
 import gongcha1 from './assets/h5/gongcha/1.png';
 import gongcha2 from './assets/h5/gongcha/2.png';
+import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
+import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
 export const PROJECTS: Project[] = [
   {
@@ -58,7 +64,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'hx-deer',
-    title: '"航小鹿" 知识付费小程序',
+    title: '"航小鹭" 知识付费小程序',
     description: '📚 一款精细化权限管理的知识付费小程序，为教育机构提供完整的数字化解决方案。\n\n🔐 核心功能：\n• 三级用户权限体系（普通/VIP/教师），实现精细化管理\n• 资料权限智能管控，保障内容价值\n• 在线充值支付系统，支持多种支付方式\n• 资料商城模块，打造知识生态闭环\n\n💻 技术架构：前端基于 UniApp + TailwindCSS 实现跨端适配；后端采用 JWT 认证与自定义注解拦截，确保安全性。',
     category: ProjectCategory.MINI_PROGRAM,
     images: [hxl1, hxl2, hxl3, hxl4, hxl5, hxl6, hxl7],
@@ -97,7 +103,7 @@ export const PROJECTS: Project[] = [
     title: '"贡茶" 在线点单网站',
     description: '🧋 贡茶奶茶店在线点单网站，为顾客提供便捷的在线下单服务。\n\n🛒 核心功能：\n• 精美的商品展示界面，清晰展示奶茶品类与价格\n• 购物车管理，支持商品添加、删除与数量修改\n• 订单提交系统，完整的下单流程体验\n• 响应式设计，完美适配 PC 端与移动端\n\n💻 技术实现：负责前端开发工作，使用现代化前端技术栈，打造流畅的用户交互体验。\n\n🎨 设计亮点：注重界面美观性与易用性，让顾客轻松浏览商品并完成下单操作，提升品牌形象与用户体验。',
     category: ProjectCategory.H5,
-    images: [gongcha1, gongcha2],
+    images: [gongcha1, gongcha2, gongchaVideo1, gongchaVideo2],
     link: '#',
     tags: ['前端开发', '购物车', '响应式设计', '用户体验']
   },
@@ -109,5 +115,14 @@ export const PROJECTS: Project[] = [
     images: [gkzyt1, gkzyt2],
     link: '#',
     tags: ['前端开发', 'UniApp', '数据展示', '用户体验']
+  },
+  {
+    id: 'hbzdcsm',
+    title: '"还不知道吃什么" 生活助手小程序',
+    description: '🍜 专为当代年轻人解决选择困难症和月光族问题而设计的生活助手小程序，提供有趣的决策工具和理财辅助功能。\n\n🎲 核心功能：\n• 3D小球趣味互动，通过有趣的互动效果随机抽取美食内容展示结果，帮助用户快速做出选择\n• 记账功能，记录日常收支，帮助用户管理财务，养成良好消费习惯\n• 卡路里计算功能，记录食物热量，辅助用户健康饮食管理\n• 智能决策系统，解决用户"今天吃什么"的纠结问题\n\n💡 项目价值：针对当代年轻人的纠结症和月光族问题提供综合解决方案，通过趣味化的互动形式和实用的功能工具，帮助用户做出更好的生活决策。\n\n✨ 设计亮点：3D小球互动效果增强用户体验趣味性，让决策过程变得轻松愉快。',
+    category: ProjectCategory.MINI_PROGRAM,
+    images: [hbzdcsm1, hbzdcsm2, hbzdcsm3],
+    link: '#',
+    tags: ['UniApp', '3D互动', '记账系统', '卡路里计算', '用户体验']
   }
 ];

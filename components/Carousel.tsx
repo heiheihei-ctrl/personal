@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 interface CarouselProps {
   images: string[];
@@ -9,6 +9,7 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageClick }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const next = () => {
     setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
@@ -17,6 +18,39 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
   const prev = () => {
     setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
+
+  // 判断是否为视频文件的辅助函数
+  const isVideoFile = (url: string): boolean => {
+    if (!url) return false;
+    const urlStr = url.toLowerCase();
+    // 检查URL中是否包含视频扩展名
+    return urlStr.includes('.mp4') || urlStr.includes('.webm') || urlStr.includes('.mov') || urlStr.includes('.m4v');
+  };
+
+  // 当切换到新索引时，播放当前视频并暂停其他视频
+  useEffect(() => {
+    const isCurrentVideo = (idx: number) => {
+      return isVideoFile(images[idx]);
+    };
+
+    // 暂停所有视频
+    videoRefs.current.forEach((video, idx) => {
+      if (video && idx !== activeIndex) {
+        video.pause();
+      }
+    });
+
+    // 播放当前视频（如果是视频）
+    if (isCurrentVideo(activeIndex)) {
+      const currentVideo = videoRefs.current[activeIndex];
+      if (currentVideo) {
+        currentVideo.play().catch((error) => {
+          // 自动播放可能被浏览器阻止，静默处理
+          console.log('Video autoplay prevented:', error);
+        });
+      }
+    }
+  }, [activeIndex, images]);
 
   const handleImageClick = (index: number) => {
     if (onImageClick) {
@@ -30,16 +64,46 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {images.map((img, idx) => (
-          <div key={idx} className="min-w-full h-full flex items-center justify-center bg-slate-100">
-            <img 
-              src={img} 
-              alt={`Slide ${idx}`} 
-              className="w-full h-full object-contain cursor-pointer"
-              onClick={() => handleImageClick(idx)}
-            />
-          </div>
-        ))}
+        {images.map((img, idx) => {
+          const isVideo = isVideoFile(img);
+          return (
+            <div key={idx} className="min-w-full h-full flex items-center justify-center bg-slate-100 relative">
+              {isVideo ? (
+                <video 
+                  ref={(el) => {
+                    videoRefs.current[idx] = el;
+                  }}
+                  src={img} 
+                  className="w-full h-full object-contain cursor-pointer"
+                  autoPlay
+                  muted
+                  playsInline
+                  loop
+                  controls
+                  preload="auto"
+                  onClick={() => handleImageClick(idx)}
+                  onLoadedData={(e) => {
+                    // 视频加载完成后尝试播放
+                    const video = e.currentTarget;
+                    video.play().catch((err) => {
+                      console.log('Video play failed:', err);
+                    });
+                  }}
+                  onError={(e) => {
+                    console.error('Video load error:', e);
+                  }}
+                />
+              ) : (
+                <img 
+                  src={img} 
+                  alt={`Slide ${idx}`} 
+                  className="w-full h-full object-contain cursor-pointer"
+                  onClick={() => handleImageClick(idx)}
+                />
+              )}
+            </div>
+          );
+        })}
       </div>
       
       {images.length > 1 && (
