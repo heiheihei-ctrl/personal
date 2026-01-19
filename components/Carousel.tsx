@@ -27,6 +27,16 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
     return urlStr.includes('.mp4') || urlStr.includes('.webm') || urlStr.includes('.mov') || urlStr.includes('.m4v');
   };
 
+  // 获取视频MIME类型
+  const getVideoType = (url: string): string => {
+    if (!url) return 'video/mp4';
+    const urlStr = url.toLowerCase();
+    if (urlStr.includes('.webm')) return 'video/webm';
+    if (urlStr.includes('.mov')) return 'video/quicktime';
+    if (urlStr.includes('.m4v')) return 'video/x-m4v';
+    return 'video/mp4'; // 默认mp4
+  };
+
   // 当切换到新索引时，播放当前视频并暂停其他视频
   useEffect(() => {
     const isCurrentVideo = (idx: number) => {
@@ -73,7 +83,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
                   ref={(el) => {
                     videoRefs.current[idx] = el;
                   }}
-                  src={img} 
                   className="w-full h-full object-contain cursor-pointer"
                   autoPlay
                   muted
@@ -91,8 +100,14 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
                   }}
                   onError={(e) => {
                     console.error('Video load error:', e);
+                    const target = e.currentTarget as HTMLVideoElement;
+                    console.error('Failed video src:', target.src);
+                    console.error('Error details:', e);
                   }}
-                />
+                >
+                  <source src={img} type={getVideoType(img)} />
+                  您的浏览器不支持视频播放。
+                </video>
               ) : (
                 <img 
                   src={img} 

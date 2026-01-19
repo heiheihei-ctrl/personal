@@ -29,6 +29,11 @@ import hbzdcsm3 from './assets/xcx/hbzdcsm/微信图片_20251219094349_382_6.png
 import carve1 from './assets/shopify/carve/1.png';
 import carve2 from './assets/shopify/carve/2.png';
 import carve3 from './assets/shopify/carve/3.png';
+import armorLite1 from './assets/shopify/armorLite/1.png';
+import armorLite2 from './assets/shopify/armorLite/2.png';
+import armorLite3 from './assets/shopify/armorLite/3.png';
+import armorLite4 from './assets/shopify/armorLite/4.png';
+import armorLite5 from './assets/shopify/armorLite/5.png';
 
 // H5 图片导入
 import ffl1 from './assets/h5/ffl/微信图片_20251118173708_249_6.jpg';
@@ -61,6 +66,15 @@ export const PROJECTS: Project[] = [
     images: [carve1, carve2, carve3],
     link: 'http://47.254.67.102:9090/',
     tags: ['React', 'Node.js', 'Shopify API', 'GraphQL', 'TailwindCSS']
+  },
+  {
+    id: 'armorlite-site',
+    title: '"ArmorLite" Shopify 电商网站',
+    description: '🛡️ 专业的防护产品电商独立站，基于 Shopify CLI 开发，高度还原设计稿的精品项目。\n\n✨ 技术亮点：\n• 使用 Shopify CLI 进行本地开发与调试，提升开发效率\n• 基于 Shopify 主题系统深度定制，实现精准还原设计稿\n• 响应式设计完美适配各设备，确保移动端与桌面端体验一致\n• 优化产品展示流程，提升用户购物体验与转化率\n\n🎨 设计还原：严格按照设计稿进行开发，从布局到交互细节，高度还原设计师的视觉呈现。\n\n🎯 业务价值：为防护产品品牌提供专业的电商平台，展示产品特性与优势，助力品牌在线销售。',
+    category: ProjectCategory.SHOPIFY,
+    images: [armorLite1, armorLite2, armorLite3, armorLite4, armorLite5],
+    link: '#',
+    tags: ['Shopify CLI', 'Liquid', '响应式设计', '设计还原', '电商']
   },
   {
     id: 'hx-deer',
@@ -101,11 +115,11 @@ export const PROJECTS: Project[] = [
   {
     id: 'gongcha',
     title: '"贡茶" 在线点单网站',
-    description: '🧋 贡茶奶茶店在线点单网站，为顾客提供便捷的在线下单服务。\n\n🛒 核心功能：\n• 精美的商品展示界面，清晰展示奶茶品类与价格\n• 购物车管理，支持商品添加、删除与数量修改\n• 订单提交系统，完整的下单流程体验\n• 响应式设计，完美适配 PC 端与移动端\n\n💻 技术实现：负责前端开发工作，使用现代化前端技术栈，打造流畅的用户交互体验。\n\n🎨 设计亮点：注重界面美观性与易用性，让顾客轻松浏览商品并完成下单操作，提升品牌形象与用户体验。',
+    description: '🧋 贡茶奶茶店在线点单网站，为顾客提供便捷的在线下单服务。\n\n🛒 核心功能：\n• 精美的商品展示界面，清晰展示奶茶品类与价格\n• 购物车管理，支持商品添加、删除与数量修改\n• 订单提交系统，完整的下单流程体验\n• 响应式设计，完美适配 PC 端与移动端\n\n💻 技术实现：负责前端开发工作，使用现代化前端技术栈，打造流畅的用户交互体验。\n• 集成 Lottie 动画引擎，实现流畅丰富的动效，提升视觉体验\n\n🎨 设计亮点：注重界面美观性与易用性，让顾客轻松浏览商品并完成下单操作，提升品牌形象与用户体验。',
     category: ProjectCategory.H5,
-    images: [gongcha1, gongcha2, gongchaVideo1, gongchaVideo2],
+    images: [gongcha1, gongcha2, gongchaVideo2, gongchaVideo1],
     link: '#',
-    tags: ['前端开发', '购物车', '响应式设计', '用户体验']
+    tags: ['前端开发', '购物车', '响应式设计', '用户体验', 'Lottie']
   },
   {
     id: 'gkzyt',
@@ -121,7 +135,7 @@ export const PROJECTS: Project[] = [
     title: '"还不知道吃什么" 生活助手小程序',
     description: '🍜 专为当代年轻人解决选择困难症和月光族问题而设计的生活助手小程序，提供有趣的决策工具和理财辅助功能。\n\n🎲 核心功能：\n• 3D小球趣味互动，通过有趣的互动效果随机抽取美食内容展示结果，帮助用户快速做出选择\n• 记账功能，记录日常收支，帮助用户管理财务，养成良好消费习惯\n• 卡路里计算功能，记录食物热量，辅助用户健康饮食管理\n• 智能决策系统，解决用户"今天吃什么"的纠结问题\n\n💡 项目价值：针对当代年轻人的纠结症和月光族问题提供综合解决方案，通过趣味化的互动形式和实用的功能工具，帮助用户做出更好的生活决策。\n\n✨ 设计亮点：3D小球互动效果增强用户体验趣味性，让决策过程变得轻松愉快。',
     category: ProjectCategory.MINI_PROGRAM,
-    images: [hbzdcsm1, hbzdcsm2, hbzdcsm3],
+    images: [hbzdcsm3, hbzdcsm2, hbzdcsm1],
     link: '#',
     tags: ['UniApp', '3D互动', '记账系统', '卡路里计算', '用户体验']
   }

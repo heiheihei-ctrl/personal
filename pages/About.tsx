@@ -1,5 +1,6 @@
 
 import React from 'react';
+import avatar from '../assets/avatar.jpg';
 
 const About: React.FC = () => {
   return (
@@ -8,9 +9,9 @@ const About: React.FC = () => {
         {/* Left Sidebar: Basic Info */}
         <div className="lg:col-span-4">
           <div className="sticky top-24 space-y-8">
-            <div className="bg-white p-2 rounded-3xl shadow-xl shadow-blue-100/50 border border-blue-50 overflow-hidden">
+            <div className="mx-auto w-1/2 lg:w-full bg-white p-2 rounded-3xl shadow-xl shadow-blue-100/50 border border-blue-50 overflow-hidden">
                <img 
-                src="https://picsum.photos/600/600?random=resume" 
+                src={avatar} 
                 alt="钱盈熠" 
                 className="w-full aspect-square object-cover rounded-2xl"
               />
@@ -19,7 +20,7 @@ const About: React.FC = () => {
             <div className="space-y-6 bg-white p-6 rounded-2xl border border-blue-50 shadow-sm">
               <div>
                 <h1 className="text-3xl font-extrabold text-slate-900">钱盈熠</h1>
-                <p className="text-blue-600 font-medium mt-1">全栈开发工程师 / 前端专家</p>
+                <p className="text-blue-600 font-medium mt-1">全栈开发工程师 / 前端方向</p>
               </div>
 
               <div className="space-y-3">
@@ -60,13 +61,17 @@ const About: React.FC = () => {
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
               自我评价
             </h2>
-            <p className="text-slate-600 leading-relaxed text-lg whitespace-pre-line">
-              💡 我是一名拥有两年实战经验的前端开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
-
-📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">Next.js、Astro、Three.js</span> 等前沿框架。
-
-🚀 我始终保持对新技术的好奇心，并乐于接受高挑战性的项目，追求代码质量与交互体验的完美平衡。
-            </p>
+            <div className="text-slate-600 leading-relaxed text-lg space-y-4">
+              <p>
+                💡 我是一名拥有两年半实战经验的前端开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
+              </p>
+              <p>
+                📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">Next.js、Astro、Three.js</span> 等前沿框架。
+              </p>
+              <p>
+                🚀 我始终保持对新技术的好奇心，并乐于接受高挑战性的项目，追求代码质量与交互体验的完美平衡。
+              </p>
+            </div>
           </section>
 
           {/* Experience */}
