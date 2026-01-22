@@ -35,6 +35,10 @@ import armorLite3 from './assets/shopify/armorLite/3.png';
 import armorLite4 from './assets/shopify/armorLite/4.png';
 import armorLite5 from './assets/shopify/armorLite/5.png';
 
+// Web 项目图片导入
+import erp1 from './assets/web/erp/1.png';
+import erp2 from './assets/web/erp/2.png';
+
 // H5 图片导入
 import ffl1 from './assets/h5/ffl/微信图片_20251118173708_249_6.jpg';
 import ffl2 from './assets/h5/ffl/微信图片_20251118173709_250_6.jpg';
@@ -75,6 +79,15 @@ export const PROJECTS: Project[] = [
     images: [armorLite1, armorLite2, armorLite3, armorLite4, armorLite5],
     link: '#',
     tags: ['Shopify CLI', 'Liquid', '响应式设计', '设计还原', '电商']
+  },
+  {
+    id: 'erp-system',
+    title: 'ERP 企业管理系统',
+    description: '🏢 企业级 ERP 管理系统，为企业提供全面的业务流程管理解决方案。\n\n✨ 技术亮点：\n• 集成积木报表技术，实现灵活的数据报表配置与展示\n• 支持多维度数据统计与分析，满足企业决策需求\n• 模块化架构设计，便于功能扩展与维护\n• 完善的权限管理体系，保障数据安全\n\n💻 技术实现：采用现代化的技术栈，结合积木报表实现强大的报表功能，为企业提供高效的管理工具。',
+    category: ProjectCategory.WEB,
+    images: [erp1, erp2],
+    link: '#',
+    tags: ['积木报表', '企业系统', '数据管理', '权限管理', '报表系统']
   },
   {
     id: 'hx-deer',
