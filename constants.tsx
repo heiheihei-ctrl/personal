@@ -24,6 +24,19 @@ import gkzyt2 from './assets/xcx/gkzyt/2.png';
 import hbzdcsm1 from './assets/xcx/hbzdcsm/微信图片_20251219094349_380_6.png';
 import hbzdcsm2 from './assets/xcx/hbzdcsm/微信图片_20251219094349_381_6.png';
 import hbzdcsm3 from './assets/xcx/hbzdcsm/微信图片_20251219094349_382_6.png';
+// 联线心动小程序图片导入
+import lxxd1 from './assets/xcx/lxxd/1.png';
+import lxxd2 from './assets/xcx/lxxd/2.png';
+import lxxd3 from './assets/xcx/lxxd/3.png';
+import lxxd4 from './assets/xcx/lxxd/4.png';
+import lxxd5 from './assets/xcx/lxxd/5.png';
+import lxxd6 from './assets/xcx/lxxd/6.png';
+import lxxd7 from './assets/xcx/lxxd/7.png';
+import lxxd8 from './assets/xcx/lxxd/8.png';
+import lxxd9 from './assets/xcx/lxxd/9.png';
+import lxxd10 from './assets/xcx/lxxd/10.png';
+import lxxd11 from './assets/xcx/lxxd/11.png';
+import lxxd12 from './assets/xcx/lxxd/12.png';
 
 // Shopify 图片导入
 import carve1 from './assets/shopify/carve/1.png';
@@ -197,5 +210,14 @@ export const PROJECTS: Project[] = [
     images: [xypt1, xypt2],
     link: 'https://www.bilibili.com/video/BV1364y1p7dA/?share_source=copy_web&vd_source=f832e9d34cb770f4397a430b5217ef6e',
     tags: ['UI设计', '小程序', '校园服务', '传智杯']
+  },
+  {
+    id: 'lxxd',
+    title: '"联线心动" 社交小程序',
+    description: '💕 一款功能丰富的社交互动小程序，为用户提供多元化的社交体验与互动平台。\n\n🎯 核心功能：\n• 动态发布与管理，支持图文内容分享，打造个人社交空间\n• 点赞与评论系统，实现用户间的互动交流，增强社交粘性\n• 邀请功能，通过邀请好友扩大社交圈，提升平台活跃度\n• 订单管理，完善的订单系统支持各类社交服务交易\n• 提现功能，支持收益提现，为用户提供便捷的财务管理\n\n💻 技术实现：\n• 采用现代化小程序开发框架，确保流畅的用户体验\n• 完善的社交互动机制，支持实时消息推送与状态更新\n• 安全可靠的支付与提现系统，保障用户资金安全\n\n🎯 应用价值：为用户打造一个集社交、互动、交易于一体的综合性社交平台，通过丰富的功能提升用户参与度与平台活跃度。',
+    category: ProjectCategory.MINI_PROGRAM,
+    images: [lxxd1, lxxd2, lxxd3, lxxd4, lxxd5, lxxd6, lxxd7, lxxd8, lxxd9, lxxd10, lxxd11, lxxd12],
+    link: '#',
+    tags: ['社交', '动态发布', '互动', '订单管理', '提现系统']
   }
 ];
