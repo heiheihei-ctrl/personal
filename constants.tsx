@@ -35,14 +35,24 @@ import armorLite3 from './assets/shopify/armorLite/3.png';
 import armorLite4 from './assets/shopify/armorLite/4.png';
 import armorLite5 from './assets/shopify/armorLite/5.png';
 
+// UI 设计图片导入
+import xypt1 from './assets/ui/xypt/A3-客户端.png';
+import xypt2 from './assets/ui/xypt/2.png';
+
 // Web 项目图片导入
 import erp1 from './assets/web/erp/1.png';
 import erp2 from './assets/web/erp/2.png';
+import xmglxt1 from './assets/web/xmglxt/1.png';
+import xmglxt2 from './assets/web/xmglxt/2.png';
+import xmglxt3 from './assets/web/xmglxt/3.png';
+import xmglxt4 from './assets/web/xmglxt/4.png';
+import zxjkxt1 from './assets/web/zxjkxt/1.jpg';
+import hfcjcxt1 from './assets/web/hfcjcxt/1.png';
 
 // H5 图片导入
-import ffl1 from './assets/h5/ffl/微信图片_20251118173708_249_6.jpg';
-import ffl2 from './assets/h5/ffl/微信图片_20251118173709_250_6.jpg';
-import migong1 from './assets/h5/migong/微信图片_20251118173711_252_6.jpg';
+import ffl1 from './assets/h5/hdyx/ffl1.jpg';
+import ffl2 from './assets/h5/hdyx/ffl2.jpg';
+import migong1 from './assets/h5/hdyx/migong.jpg';
 import yxt1 from './assets/h5/yxt/微信图片_20250429225031_495_7.jpg';
 import yxt2 from './assets/h5/yxt/微信图片_20250429225032_494_7.jpg';
 import yxt3 from './assets/h5/yxt/微信图片_20250429225033_493_7.jpg';
@@ -90,6 +100,33 @@ export const PROJECTS: Project[] = [
     tags: ['积木报表', '企业系统', '数据管理', '权限管理', '报表系统']
   },
   {
+    id: 'project-management',
+    title: '项目管理系统',
+    description: '📊 个人项目管理系统，用于管理个人项目相关的一套完整系统。\n\n✨ 核心功能：\n• 记事本功能，记录项目相关的重要信息和笔记\n• 项目数据统计，全面展示项目各项数据指标\n• 利润统计，清晰展示项目收益情况\n• 项目全生命周期管理，从创建到完成的全流程跟踪\n\n💻 技术实现：\n• 前端采用 Vue 框架，构建现代化的用户界面\n• 后端使用 Laravel 框架，提供稳定可靠的服务支持\n• 前后端分离架构，确保系统的高效运行和易于维护\n\n🎯 项目价值：为个人开发者提供专业的项目管理工具，帮助更好地组织和跟踪项目进展，提升工作效率。',
+    category: ProjectCategory.WEB,
+    images: [xmglxt1, xmglxt2, xmglxt3, xmglxt4],
+    link: '#',
+    tags: ['Vue', 'Laravel', '项目管理', '数据统计', '利润统计']
+  },
+  {
+    id: 'online-monitoring',
+    title: '在线监控系统',
+    description: '📹 基于 RTSP 流媒体的实时在线监控系统，通过内网摄像头实现 web 端实时视频监控。\n\n✨ 核心功能：\n• RTSP 流转换技术，将内网摄像头 RTSP 流转换为 web 端可播放的实时视频流\n• 实时视频监控，支持多路摄像头同时在线监控\n• 传感器数据展示，实时显示 pH 值、溶解氧等水质监测参数\n• 参数可视化，通过图表和仪表盘直观展示传感器数据变化趋势\n\n💻 技术实现：\n• 采用流媒体转换技术，实现 RTSP 到 Web 的实时转码\n• 前后端分离架构，确保视频流的稳定传输\n• 实时数据采集与展示，支持传感器数据的实时更新\n\n🎯 应用价值：为水质监测、环境监控等场景提供实时可视化的监控解决方案，提升监测效率与数据透明度。',
+    category: ProjectCategory.WEB,
+    images: [zxjkxt1],
+    link: '#',
+    tags: ['RTSP', '流媒体', '实时监控', '传感器数据', '数据可视化']
+  },
+  {
+    id: 'septic-tank-monitoring',
+    title: '化粪池监测系统',
+    description: '🗺️ 基于地图的化粪池监测管理系统，实现监测设备的可视化定位与状态管理。\n\n✨ 核心功能：\n• 地图标记定位，在地图上精确标记每个化粪池监测设备的地理位置\n• 设备状态监控，实时查看各监测设备的运行状态和监测数据\n• 多设备管理，支持批量查看和管理多个监测点的设备信息\n• 状态可视化，通过地图标记颜色和图标直观展示设备健康状态\n\n💻 技术实现：\n• 集成地图 API，实现设备位置的精准定位与展示\n• 实时数据接口，获取并展示各监测设备的实时状态\n• 响应式设计，支持 PC 端与移动端访问\n\n🎯 应用价值：为化粪池监测管理提供可视化的解决方案，帮助管理人员快速定位设备位置，及时掌握监测状态，提升管理效率。',
+    category: ProjectCategory.WEB,
+    images: [hfcjcxt1],
+    link: '#',
+    tags: ['地图定位', '设备监控', '实时状态', '数据可视化', 'GIS']
+  },
+  {
     id: 'hx-deer',
     title: '"航小鹭" 知识付费小程序',
     description: '📚 一款精细化权限管理的知识付费小程序，为教育机构提供完整的数字化解决方案。\n\n🔐 核心功能：\n• 三级用户权限体系（普通/VIP/教师），实现精细化管理\n• 资料权限智能管控，保障内容价值\n• 在线充值支付系统，支持多种支付方式\n• 资料商城模块，打造知识生态闭环\n\n💻 技术架构：前端基于 UniApp + TailwindCSS 实现跨端适配；后端采用 JWT 认证与自定义注解拦截，确保安全性。',
@@ -110,11 +147,11 @@ export const PROJECTS: Project[] = [
   {
     id: 'h5-campaign',
     title: '互动营销活动 H5',
-    description: '🎪 高性能互动营销 H5 页面，打造极致的用户体验。\n\n🎬 技术亮点：\n• 集成 Lottie 动画引擎，实现流畅丰富的动效\n• 图片懒加载与防抖节流优化，性能表现优异\n• 完美适配低端移动设备，保证流畅运行\n\n🎮 互动玩法：\n• "分分乐"：趣味互动游戏，提升用户参与度\n• "迷宫"：创意挑战模式，增强品牌记忆\n\n📈 营销价值：通过有趣的互动形式，显著提升用户转化率与品牌传播效果。',
+    description: '🎪 高性能互动营销 H5 页面，打造极致的用户体验。\n\n🎬 技术亮点：\n• 图片懒加载与防抖节流优化，性能表现优异\n• 完美适配低端移动设备，保证流畅运行\n\n🎮 互动玩法：\n• "分分乐"：趣味互动游戏，提升用户参与度\n• "迷宫"：创意挑战模式，增强品牌记忆\n\n📈 营销价值：通过有趣的互动形式，显著提升用户转化率与品牌传播效果。',
     category: ProjectCategory.H5,
     images: [ffl1, ffl2, migong1],
     link: '#',
-    tags: ['Lottie', '性能优化', 'GSAP']
+    tags: ['性能优化', 'GSAP']
   },
   {
     id: 'yxt',
@@ -149,7 +186,16 @@ export const PROJECTS: Project[] = [
     description: '🍜 专为当代年轻人解决选择困难症和月光族问题而设计的生活助手小程序，提供有趣的决策工具和理财辅助功能。\n\n🎲 核心功能：\n• 3D小球趣味互动，通过有趣的互动效果随机抽取美食内容展示结果，帮助用户快速做出选择\n• 记账功能，记录日常收支，帮助用户管理财务，养成良好消费习惯\n• 卡路里计算功能，记录食物热量，辅助用户健康饮食管理\n• 智能决策系统，解决用户"今天吃什么"的纠结问题\n\n💡 项目价值：针对当代年轻人的纠结症和月光族问题提供综合解决方案，通过趣味化的互动形式和实用的功能工具，帮助用户做出更好的生活决策。\n\n✨ 设计亮点：3D小球互动效果增强用户体验趣味性，让决策过程变得轻松愉快。',
     category: ProjectCategory.MINI_PROGRAM,
     images: [hbzdcsm3, hbzdcsm2, hbzdcsm1],
-    link: '#',
+    link: 'https://www.bilibili.com/video/BV1SK411B7vk/?share_source=copy_web&vd_source=f832e9d34cb770f4397a430b5217ef6e',
     tags: ['UniApp', '3D互动', '记账系统', '卡路里计算', '用户体验']
+  },
+  {
+    id: 'xypt',
+    title: '"懒人帮校园跑腿" 小程序',
+    description: '🏃 校园生活服务小程序，为校园用户提供便捷的跑腿服务，解决校园内的配送需求。\n\n🎯 核心功能：\n• 跑腿订单发布与管理，支持多种服务类型\n• 配送员接单系统，实现订单快速匹配\n• 实时订单状态跟踪，保障服务透明度\n• 完善的评价体系，提升服务质量\n\n🏆 项目荣誉：第六届"传智杯"全国大学生IT技能大赛WEB前端微信小程序开发挑战赛参赛作品\n\n💻 技术实现：使用现代化前端技术栈，打造流畅的用户体验，为校园用户提供便捷的生活服务。',
+    category: ProjectCategory.UI_DESIGN,
+    images: [xypt1, xypt2],
+    link: 'https://www.bilibili.com/video/BV1364y1p7dA/?share_source=copy_web&vd_source=f832e9d34cb770f4397a430b5217ef6e',
+    tags: ['UI设计', '小程序', '校园服务', '传智杯']
   }
 ];

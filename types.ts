@@ -5,8 +5,7 @@ export enum ProjectCategory {
   APP = 'APP',
   H5 = 'H5',
   SHOPIFY = 'Shopify',
-  WEB = 'Web',
-  BLOCKCHAIN = '区块链'
+  WEB = 'Web'
 }
 
 export interface Project {
