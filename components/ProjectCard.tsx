@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Project, ProjectCategory } from '../types';
+import { Project, ProjectCategory, formatProjectDate } from '../types';
 import Carousel from './Carousel';
 
 interface ProjectCardProps {
@@ -26,6 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </Link>
       
       <div className="p-6 flex flex-col flex-grow">
+        <p className="text-xs text-slate-400 mb-2">{formatProjectDate(project.date)}</p>
         <h3 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
           {project.title}
         </h3>

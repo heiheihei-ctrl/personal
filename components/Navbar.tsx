@@ -7,6 +7,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: '作品集', path: '/' },
+    { name: '博客', path: '/blog' },
     { name: '关于我', path: '/about' }
   ];
 
@@ -28,7 +29,7 @@ const Navbar: React.FC = () => {
                 key={link.path}
                 to={link.path}
                 className={`text-sm font-semibold transition-all hover:text-blue-600 ${
-                  location.pathname === link.path 
+                  (link.path === '/blog' ? location.pathname.startsWith('/blog') : location.pathname === link.path)
                     ? 'text-blue-600 relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:rounded-full' 
                     : 'text-slate-500'
                 }`}

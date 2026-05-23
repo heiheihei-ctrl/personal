@@ -4,6 +4,8 @@ import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-d
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
+import Blog from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 import ProjectDetail from './pages/ProjectDetail';
 
 // Helper to scroll to top on route change
@@ -25,6 +27,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogDetail />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
           </Routes>
         </div>
@@ -39,6 +43,7 @@ const App: React.FC = () => {
                 <div className="space-y-3">
                   <p className="text-white text-xs uppercase tracking-widest font-bold opacity-50">快速链接</p>
                   <a href="/" className="block hover:text-blue-400 transition-colors">作品合集</a>
+                  <a href="/blog" className="block hover:text-blue-400 transition-colors">技术博客</a>
                   <a href="/about" className="block hover:text-blue-400 transition-colors">关于我</a>
                 </div>
                 <div className="space-y-3">

@@ -9,9 +9,10 @@ const Home: React.FC = () => {
 
   const categories = ['全部', ...Object.values(ProjectCategory)];
 
-  const filteredProjects = selectedCategory === '全部' 
+  const filteredProjects = (selectedCategory === '全部' 
     ? PROJECTS 
-    : PROJECTS.filter(p => p.category === selectedCategory);
+    : PROJECTS.filter(p => p.category === selectedCategory)
+  ).sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <main className="min-h-screen">

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { PROJECTS } from '../constants.tsx';
-import { ProjectCategory } from '../types';
+import { ProjectCategory, formatProjectDate } from '../types';
 import Carousel from '../components/Carousel';
 import ImageModal from '../components/ImageModal';
 
@@ -98,6 +98,7 @@ const ProjectDetail: React.FC = () => {
                 <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">
                   {project.title}
                 </h1>
+                <p className="mt-3 text-sm text-slate-400">{formatProjectDate(project.date)}</p>
               </div>
 
               <div className="space-y-6">

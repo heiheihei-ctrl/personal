@@ -47,6 +47,11 @@ import armorLite2 from './assets/shopify/armorLite/2.png';
 import armorLite3 from './assets/shopify/armorLite/3.png';
 import armorLite4 from './assets/shopify/armorLite/4.png';
 import armorLite5 from './assets/shopify/armorLite/5.png';
+import posefootwear1 from './assets/shopify/posefootwear/1.png';
+import posefootwear2 from './assets/shopify/posefootwear/2.png';
+import posefootwear3 from './assets/shopify/posefootwear/3.png';
+import bluebox1 from './assets/shopify/bluebox/1.png';
+import bluebox2 from './assets/shopify/bluebox/2.png';
 
 // UI 设计图片导入
 import xypt1 from './assets/ui/xypt/A3-客户端.png';
@@ -92,7 +97,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.SHOPIFY,
     images: [carve1, carve2, carve3],
     link: 'http://47.254.67.102:9090/',
-    tags: ['React', 'Node.js', 'Shopify API', 'GraphQL', 'TailwindCSS']
+    tags: ['React', 'Node.js', 'Shopify API', 'GraphQL', 'TailwindCSS'],
+    date: '2025-09-20'
   },
   {
     id: 'armorlite-site',
@@ -101,7 +107,28 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.SHOPIFY,
     images: [armorLite1, armorLite2, armorLite3, armorLite4, armorLite5],
     link: '#',
-    tags: ['Shopify CLI', 'Liquid', '响应式设计', '设计还原', '电商']
+    tags: ['Shopify CLI', 'Liquid', '响应式设计', '设计还原', '电商'],
+    date: '2026-03-06'
+  },
+  {
+    id: 'posefootwear-site',
+    title: '"POSE footwear" 运动舒缓鞋履品牌官网',
+    description: '👟 云端漫步科技旗下 POSE 运动舒缓拖凉鞋品牌的官方电商网站，面向全球消费者展示品牌理念与产品矩阵。\n\n🏢 品牌背景：\n• 云端漫步科技总部位于杭州，专注鞋履行业科技创新\n• POSE 品牌通过自研 Anti-stress 技术，结合人体工学设计与创新材料，为运动后恢复、长时间站立或行走人群提供卓越足部舒缓体验\n• 旗下另有 FIZO 个性化定制运动鞋品牌，以 3D 打印与环保材料实现可持续定制\n\n✨ 技术亮点：\n• 基于 Shopify CLI 进行主题本地开发与调试，高效迭代上线\n• 使用 TailwindCSS 构建响应式布局，完美适配 PC 端与移动端\n• 深度定制 Shopify 主题，实现新品展示、场景分类、活动专区等电商功能\n• 优化产品浏览与购物流程，提升品牌转化与用户购物体验\n\n🎯 业务价值：为 POSE 品牌打造专业的全球化电商门户，传递「用科技关爱人类的每一步，解锁自由之姿」的品牌理念，助力云端漫步科技引领鞋履行业变革。',
+    category: ProjectCategory.SHOPIFY,
+    images: [posefootwear1, posefootwear2, posefootwear3],
+    link: 'https://posefootwear.com/',
+    tags: ['Shopify CLI', 'TailwindCSS', '响应式设计', 'Liquid', '电商'],
+    date: '2026-04-10'
+  },
+  {
+    id: 'bluebox-jp-site',
+    title: '"蓝盒子 Bluebox" 日本独立站',
+    description: '🛏️ 万物安睡科技旗下知名睡眠品牌「蓝盒子（BLUEBOX）」的日本市场 Shopify 独立站，助力品牌拓展海外电商渠道。\n\n🏢 品牌背景：\n• 蓝盒子成立于 2019 年，是万物安睡（上海）科技有限公司旗下的睡眠品牌，主营床垫及家居睡眠产品\n• 核心产品 Z1 记忆棉弹簧床垫采用三段式聚点支撑设计，提供 100 天试睡与 25 年弹簧质保，曾获红点设计至尊奖、亚洲睡眠科技金奖等国际荣誉\n• 品牌从线上渠道起步，2023 年全平台销售额突破 8 亿元，全国布局超过 120 家睡眠体验店，在天猫、小红书等自媒体平台拥有广泛影响力\n• 品牌主张「让好睡眠成为习惯」，以简约、真诚、分享为价值观，持续深耕睡眠品类\n\n✨ 技术亮点：\n• 基于 Shopify CLI 进行主题本地开发与调试，高效迭代上线\n• 使用 TailwindCSS 构建响应式布局，完美适配 PC 端与移动端\n• 深度定制 Shopify 主题，适配日本市场产品展示与购物流程\n• 优化品牌视觉呈现与页面交互，提升海外用户购物体验\n\n🎯 业务价值：为蓝盒子品牌搭建日本市场专属电商门户，传递品牌睡眠理念，助力中国睡眠品牌出海拓展国际市场。',
+    category: ProjectCategory.SHOPIFY,
+    images: [bluebox1, bluebox2],
+    link: 'https://bluebox-jp.myshopify.com/pages/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC',
+    tags: ['Shopify CLI', 'TailwindCSS', '响应式设计', 'Liquid', '电商'],
+    date: '2026-05-23'
   },
   {
     id: 'erp-system',
@@ -110,7 +137,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.WEB,
     images: [erp1, erp2],
     link: '#',
-    tags: ['积木报表', '企业系统', '数据管理', '权限管理', '报表系统']
+    tags: ['积木报表', '企业系统', '数据管理', '权限管理', '报表系统'],
+    date: '2025-12-02'
   },
   {
     id: 'project-management',
@@ -119,7 +147,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.WEB,
     images: [xmglxt1, xmglxt2, xmglxt3, xmglxt4],
     link: '#',
-    tags: ['Vue', 'Laravel', '项目管理', '数据统计', '利润统计']
+    tags: ['Vue', 'Laravel', '项目管理', '数据统计', '利润统计'],
+    date: '2022-12-30'
   },
   {
     id: 'online-monitoring',
@@ -128,7 +157,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.WEB,
     images: [zxjkxt1],
     link: '#',
-    tags: ['RTSP', '流媒体', '实时监控', '传感器数据', '数据可视化']
+    tags: ['RTSP', '流媒体', '实时监控', '传感器数据', '数据可视化'],
+    date: '2025-07-20'
   },
   {
     id: 'septic-tank-monitoring',
@@ -137,7 +167,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.WEB,
     images: [hfcjcxt1],
     link: '#',
-    tags: ['地图定位', '设备监控', '实时状态', '数据可视化', 'GIS']
+    tags: ['地图定位', '设备监控', '实时状态', '数据可视化', 'GIS'],
+    date: '2025-09-20'
   },
   {
     id: 'hx-deer',
@@ -146,7 +177,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINI_PROGRAM,
     images: [hxl1, hxl2, hxl3, hxl4, hxl5, hxl6, hxl7],
     link: '#',
-    tags: ['Vite', 'UniApp', 'TailwindCSS', '若依', '支付集成']
+    tags: ['Vite', 'UniApp', 'TailwindCSS', '若依', '支付集成'],
+    date: '2026-01-29'
   },
   {
     id: 'xh-affair',
@@ -155,7 +187,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINI_PROGRAM,
     images: [xhs1, xhs2, xhs3, xhs4, xhs5, xhs6],
     link: '#',
-    tags: ['Vite', 'UniApp', 'uView-Plus', '业务逻辑优化']
+    tags: ['Vite', 'UniApp', 'uView-Plus', '业务逻辑优化'],
+    date: '2025-10-16'
   },
   {
     id: 'h5-campaign',
@@ -164,7 +197,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.H5,
     images: [ffl1, ffl2, migong1],
     link: '#',
-    tags: ['性能优化', 'GSAP']
+    tags: ['性能优化', 'GSAP'],
+    date: '2025-12-05'
   },
   {
     id: 'yxt',
@@ -173,7 +207,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.H5,
     images: [yxt1, yxt2, yxt3, yxt4, yxt5, yxt6, yxt7, yxt8, yxt9, yxt10, yxt11, yxt12, yxt13],
     link: '#',
-    tags: ['全栈开发', '题库系统', '在线考试', '数据可视化']
+    tags: ['全栈开发', '题库系统', '在线考试', '数据可视化'],
+    date: '2023-04-15'
   },
   {
     id: 'gongcha',
@@ -182,7 +217,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.H5,
     images: [gongcha1, gongcha2, gongchaVideo2, gongchaVideo1],
     link: '#',
-    tags: ['前端开发', '购物车', '响应式设计', '用户体验', 'Lottie']
+    tags: ['前端开发', '购物车', '响应式设计', '用户体验', 'Lottie'],
+    date: '2023-09-01'
   },
   {
     id: 'gkzyt',
@@ -191,7 +227,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINI_PROGRAM,
     images: [gkzyt1, gkzyt2],
     link: '#',
-    tags: ['前端开发', 'UniApp', '数据展示', '用户体验']
+    tags: ['前端开发', 'UniApp', '数据展示', '用户体验'],
+    date: '2024-11-09'
   },
   {
     id: 'hbzdcsm',
@@ -200,7 +237,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINI_PROGRAM,
     images: [hbzdcsm3, hbzdcsm2, hbzdcsm1],
     link: 'https://www.bilibili.com/video/BV1SK411B7vk/?share_source=copy_web&vd_source=f832e9d34cb770f4397a430b5217ef6e',
-    tags: ['UniApp', '3D互动', '记账系统', '卡路里计算', '用户体验']
+    tags: ['UniApp', '3D互动', '记账系统', '卡路里计算', '用户体验'],
+    date: '2022-11-16'
   },
   {
     id: 'xypt',
@@ -209,7 +247,8 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.UI_DESIGN,
     images: [xypt1, xypt2],
     link: 'https://www.bilibili.com/video/BV1364y1p7dA/?share_source=copy_web&vd_source=f832e9d34cb770f4397a430b5217ef6e',
-    tags: ['UI设计', '小程序', '校园服务', '传智杯']
+    tags: ['UI设计', '小程序', '校园服务', '传智杯'],
+    date: '2023-12-15'
   },
   {
     id: 'lxxd',
@@ -218,6 +257,7 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINI_PROGRAM,
     images: [lxxd1, lxxd2, lxxd3, lxxd4, lxxd5, lxxd6, lxxd7, lxxd8, lxxd9, lxxd10, lxxd11, lxxd12],
     link: '#',
-    tags: ['社交', '动态发布', '互动', '订单管理', '提现系统']
+    tags: ['社交', '动态发布', '互动', '订单管理', '提现系统'],
+    date: '2024-04-20'
   }
 ];
