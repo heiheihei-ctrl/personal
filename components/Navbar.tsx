@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: '作品集', path: '/' },
-    { name: '博客', path: '/blog' },
+    // { name: '博客', path: '/blog' },
     { name: '关于我', path: '/about' }
   ];
 
