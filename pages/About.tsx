@@ -63,7 +63,7 @@ const About: React.FC = () => {
             </h2>
             <div className="text-slate-600 leading-relaxed text-lg space-y-4">
               <p>
-                💡 我是一名拥有两年半实战经验的前端开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
+                💡 我是一名拥有三年实战经验的前端开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
               </p>
               <p>
                 📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">Next.js、Astro、Three.js</span> 等前沿框架。
