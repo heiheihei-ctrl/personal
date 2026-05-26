@@ -147,13 +147,13 @@ const About: React.FC = () => {
                 <div>
                   <h4 className="text-sm font-bold text-slate-800 mb-2">💻 前端核心 (Frontend Stack)</h4>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    精通 HTML5/CSS3 (Flex, Grid)，深耕 Vue 2/3 及 React 生态。熟练应用 <span className="font-semibold">Tailwind CSS</span>、TypeScript。擅长使用 <span className="font-semibold">Lottie</span> 实现动效及前端性能优化（懒加载、节流防抖）。
+                    熟悉 HTML5/CSS3 (Flex, Grid)，深耕 Vue 2/3 及 React 生态。熟练应用 <span className="font-semibold">Tailwind CSS</span>、TypeScript。擅长使用 <span className="font-semibold">Lottie</span> 实现动效及前端性能优化（懒加载、节流防抖）。
                   </p>
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-slate-800 mb-2">⚙️ 后端与跨端 (Backend & Hybrid)</h4>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    具备 PHP (Laravel) 及 Java (SpringBoot, MyBatis-Plus) 开发经验。精通 UniApp 跨端开发及 Shopify 独立站生态。
+                    具备 PHP (Laravel) 及 Java (SpringBoot, MyBatis-Plus) 开发经验。熟悉 UniApp 跨端开发及 Shopify 独立站生态。
                   </p>
                 </div>
                 <div>
