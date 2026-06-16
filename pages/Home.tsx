@@ -32,7 +32,7 @@ const Home: React.FC = () => {
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
             💻 专注于前端开发、Shopify 独立站定制及移动端全栈解决方案<br/>
-            🏆 两年前端开发实战，屡获国家级技术奖项<br/>
+            🚀 三年前端开发实战，具备从需求到上线的全流程能力<br/>
             ✨ 致力于为品牌创造商业价值，用技术驱动业务增长
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
