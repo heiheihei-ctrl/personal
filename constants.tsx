@@ -52,6 +52,12 @@ import posefootwear2 from './assets/shopify/posefootwear/2.png';
 import posefootwear3 from './assets/shopify/posefootwear/3.png';
 import bluebox1 from './assets/shopify/bluebox/1.png';
 import bluebox2 from './assets/shopify/bluebox/2.png';
+import csfqFigma from './assets/shopify/csfq/cs-figma.png';
+import csfq1 from './assets/shopify/csfq/cs-1.png';
+import csfq2 from './assets/shopify/csfq/cs-2.png';
+import csfq3 from './assets/shopify/csfq/cs-3.png';
+import csfq4 from './assets/shopify/csfq/cs-4.png';
+import csfq5 from './assets/shopify/csfq/cs-5.png';
 
 // UI 设计图片导入
 import xypt1 from './assets/ui/xypt/A3-客户端.png';
@@ -129,6 +135,16 @@ export const PROJECTS: Project[] = [
     link: 'https://bluebox-jp.myshopify.com/pages/%E3%83%96%E3%83%A9%E3%83%B3%E3%83%89%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AA%E3%83%BC',
     tags: ['Shopify CLI', 'TailwindCSS', '响应式设计', 'Liquid', '电商'],
     date: '2026-05-23'
+  },
+  {
+    id: 'ziraspark-csfq',
+    title: '"酸醋发夹" Shopify 独立站',
+    description: '🎀 醋酸发饰品牌「酸醋发夹」（ZiraSpark）的 Shopify 独立站，以 Quiet Luxury 美学打造高端发夹电商体验。\n\n🎨 品牌风格：\n• 整体视觉采用奶油色、米杏与深棕的暖色调，搭配衬线标题与大量留白，呈现精致而克制的精品电商气质\n• 产品摄影强调自然光感与材质细节，突出醋酸板材的色彩层次与光泽质感\n• 首页以「COLOR YOUR HAIR DAY」为主视觉，搭配分类入口、商品网格与品牌故事，形成完整的浏览闭环\n\n✨ 技术亮点：\n• 基于 Shopify CLI 进行主题本地开发、热更新与部署，高效还原 Figma 定制设计稿\n• 深度定制 Liquid 主题模板，覆盖首页、商品详情、FAQ、联系我们等核心页面\n• 实现色号/尺码变体选择、评价展示、FAQ 手风琴、关联推荐等交互模块\n• 响应式适配 PC 与移动端，保证各设备下的视觉一致性与购物流畅度\n\n🎯 业务价值：为醋酸发饰品牌搭建兼具设计感与转化力的独立站，传递「日常仪式感中的轻奢精选」品牌理念，助力新品系列推广与海外销售。',
+    category: ProjectCategory.SHOPIFY,
+    images: [csfqFigma, csfq1, csfq2, csfq3, csfq4, csfq5],
+    link: 'https://www.ziraspark.com/',
+    tags: ['Shopify CLI', 'Liquid', 'Figma 还原', '响应式设计', '电商'],
+    date: '2026-09-15'
   },
   {
     id: 'erp-system',
