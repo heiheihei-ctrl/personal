@@ -13,6 +13,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const isMobile = project.category === ProjectCategory.MINI_PROGRAM || project.category === ProjectCategory.H5;
   // 手机尺寸项目使用手机竖屏高度，其他项目使用固定高度
   const imageHeight = isMobile ? 'h-80' : 'h-56';
+  // 卡片预览去掉换行，避免 line-clamp 被空行占满导致文字被裁切
+  const excerpt = project.description.replace(/\s+/g, ' ').trim();
   
   return (
     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-blue-50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full">
@@ -27,11 +29,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       
       <div className="p-6 flex flex-col flex-grow">
         <p className="text-xs text-slate-400 mb-2">{formatProjectDate(project.date)}</p>
-        <h3 className="text-xl font-bold text-slate-800 mb-2 leading-tight">
+        <h3 className="text-xl font-bold text-slate-800 mb-2 leading-snug">
           {project.title}
         </h3>
-        <p className="text-slate-600 text-sm mb-4 line-clamp-4 flex-grow whitespace-pre-line">
-          {project.description}
+        <p className="text-slate-600 text-sm mb-4 line-clamp-3 leading-relaxed flex-grow">
+          {excerpt}
         </p>
         
         <div className="flex flex-wrap gap-2 mb-6">

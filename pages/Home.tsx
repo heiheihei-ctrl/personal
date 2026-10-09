@@ -27,12 +27,12 @@ const Home: React.FC = () => {
             👋 你好，我是 YY (钱盈熠)
             <span className="w-8 h-px bg-blue-600 ml-2"></span>
           </p>
-          <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tighter leading-tight">
-            连接代码与设计，<br/>打造 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">数字化极致体验</span>
+          <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 tracking-tight leading-[1.15]">
+            连接代码与设计，<br/>打造 <span className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent py-1">数字化极致体验</span>
           </h1>
           <p className="text-lg text-slate-600 leading-relaxed mb-10 max-w-2xl mx-auto font-medium">
-            💻 专注于前端开发、Shopify 独立站定制及移动端全栈解决方案<br/>
-            🚀 三年前端开发实战，具备从需求到上线的全流程能力<br/>
+            💻 专注全栈开发与 Shopify 独立站定制，覆盖前端体验、后端接口到部署上线<br/>
+            🚀 三年开发实战，具备从需求分析到交付落地的端到端能力<br/>
             ✨ 致力于为品牌创造商业价值，用技术驱动业务增长
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">

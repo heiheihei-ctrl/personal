@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -12,15 +11,37 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-blue-100 shadow-sm">
+    <nav className="sticky top-0 z-50 bg-white/95 border-b border-blue-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between min-h-16 items-center py-2">
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="group flex items-center space-x-1">
-              <span className="text-3xl font-black italic bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent transition-all group-hover:tracking-widest">
-                YY
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-3 animate-pulse"></span>
+            <Link to="/" className="group flex items-center gap-1.5" aria-label="YY 首页">
+              {/* SVG 避免 bg-clip-text / backdrop-blur 裁切斜体字形 */}
+              <svg
+                viewBox="0 0 52 36"
+                className="h-9 w-[52px] overflow-visible transition-transform duration-300 group-hover:scale-105"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <defs>
+                  <linearGradient id="yy-logo-grad" x1="0" y1="0" x2="52" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#2563eb" />
+                    <stop offset="1" stopColor="#4f46e5" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="2"
+                  y="28"
+                  fill="url(#yy-logo-grad)"
+                  fontFamily="Inter, ui-sans-serif, system-ui, sans-serif"
+                  fontSize="26"
+                  fontWeight="900"
+                  fontStyle="italic"
+                >
+                  YY
+                </text>
+              </svg>
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse translate-y-1"></span>
             </Link>
           </div>
           <div className="flex space-x-8">

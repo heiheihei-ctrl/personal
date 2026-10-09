@@ -20,7 +20,7 @@ const About: React.FC = () => {
             <div className="space-y-6 bg-white p-6 rounded-2xl border border-blue-50 shadow-sm">
               <div>
                 <h1 className="text-3xl font-extrabold text-slate-900">钱盈熠</h1>
-                <p className="text-blue-600 font-medium mt-1">全栈开发工程师 / 前端方向</p>
+                <p className="text-blue-600 font-medium mt-1">全栈开发工程师</p>
               </div>
 
               <div className="space-y-3">
@@ -63,10 +63,10 @@ const About: React.FC = () => {
             </h2>
             <div className="text-slate-600 leading-relaxed text-lg space-y-4">
               <p>
-                💡 我是一名拥有三年实战经验的前端开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
+                💡 我是一名拥有三年实战经验的全栈开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
               </p>
               <p>
-                📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">Next.js、Astro、Three.js</span> 等前沿框架。
+                📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">大模型应用、Prompt 工程、AI Agent、RAG</span> 等 AI 应用相关技术。
               </p>
               <p>
                 🚀 我始终保持对新技术的好奇心，并乐于接受高挑战性的项目，追求代码质量与交互体验的完美平衡。
@@ -84,8 +84,23 @@ const About: React.FC = () => {
               <div className="relative pl-8 border-l-2 border-blue-100">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
                 <div className="flex flex-col md:flex-row md:justify-between mb-2">
+                  <h3 className="text-xl font-bold text-slate-900">天宫子午（深圳）科技有限公司</h3>
+                  <span className="text-blue-600 font-semibold">2026.06 - 至今</span>
+                </div>
+                <p className="text-slate-500 font-medium mb-3 italic">全栈开发工程师</p>
+                <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
+                  <li>🌐 负责公司核心项目 <a href="https://tgtai.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://tgtai.com/</a> 的日常维护与功能迭代，保障网站稳定运行及用户体验优化</li>
+                  <li>⚡ 独立完成网站前端交互优化、页面性能调优及响应式适配，提升多终端访问兼容性</li>
+                  <li>🛠️ 根据业务需求，参与网站功能模块的设计与开发，完成从需求分析到上线部署的全流程</li>
+                  <li>🔒 持续跟进网站安全与运维工作，处理线上问题，确保系统高可用性</li>
+                </ul>
+              </div>
+
+              <div className="relative pl-8 border-l-2 border-blue-100">
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
+                <div className="flex flex-col md:flex-row md:justify-between mb-2">
                   <h3 className="text-xl font-bold text-slate-900">杭州一颗糯米网络科技有限公司</h3>
-                  <span className="text-blue-600 font-semibold">2025.06 - 至今</span>
+                  <span className="text-slate-500 font-semibold">2025.06 - 2026.05</span>
                 </div>
                 <p className="text-slate-500 font-medium mb-3 italic">全栈开发工程师</p>
                 <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
@@ -99,7 +114,7 @@ const About: React.FC = () => {
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
                 <div className="flex flex-col md:flex-row md:justify-between mb-2">
                   <h3 className="text-xl font-bold text-slate-900">深圳市三合软件有限公司</h3>
-                  <span className="text-slate-500 font-semibold">2023.06 - 2025.04</span>
+                  <span className="text-slate-500 font-semibold">2023.06 - 2023.12</span>
                 </div>
                 <p className="text-slate-500 font-medium mb-3 italic">前端开发工程师</p>
                 <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
