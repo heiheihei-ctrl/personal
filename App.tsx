@@ -49,7 +49,6 @@ const App: React.FC = () => {
                 </div>
                 <div className="space-y-3">
                   <p className="text-white text-xs uppercase tracking-widest font-bold opacity-50">社交网络</p>
-                  <a href="https://github.com/heiheihei-ctrl" target="_blank" className="block hover:text-blue-400 transition-colors">GitHub</a>
                   <div className="relative group inline-block">
                     <button
                       type="button"

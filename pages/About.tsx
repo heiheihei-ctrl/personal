@@ -36,10 +36,6 @@ const About: React.FC = () => {
                   <span className="w-8 flex justify-center text-lg">🎂</span>
                   <span>2003.09.19</span>
                 </div>
-                <div className="flex items-center text-sm text-slate-600">
-                  <span className="w-8 flex justify-center text-lg">🐙</span>
-                  <a href="https://github.com/heiheihei-ctrl" target="_blank" className="text-blue-600 hover:underline">heiheihei-ctrl</a>
-                </div>
               </div>
 
               <div className="pt-4 border-t border-slate-100">
