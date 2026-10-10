@@ -84,7 +84,12 @@ const ProjectDetail: React.FC = () => {
                 </p>
               </div>
 
-              {/* In a real app, you might have more sections here like "Challenges", "Solutions", etc. */}
+              <section>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">实现过程</h2>
+                <ol className="list-decimal pl-6 space-y-4 text-slate-600 leading-relaxed text-lg">
+                  {project.implementation.map(step => <li key={step}>{step}</li>)}
+                </ol>
+              </section>
             </div>
           </div>
 
@@ -105,7 +110,7 @@ const ProjectDetail: React.FC = () => {
                 <div>
                   <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">🛠️ 核心技术</h3>
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
+                    {project.summary.techStack.map(tag => (
                       <span key={tag} className="px-3 py-1.5 bg-slate-50 text-slate-700 text-sm font-medium rounded-xl border border-slate-100">
                         {tag}
                       </span>

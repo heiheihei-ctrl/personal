@@ -1,5 +1,6 @@
 
 import { Project, ProjectCategory } from './types';
+import { PROJECT_SUMMARIES } from './projectSummaries';
 
 // 航小鹭小程序图片导入
 import cjh1 from './assets/xcx/cjh/1.jpg';
@@ -105,7 +106,7 @@ import gongcha2 from './assets/h5/gongcha/2.png';
 import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
 import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
-export const PROJECTS: Project[] = [
+const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
   {
     id: 'carve-site',
     title: '"Carve" 跨境电商独立站',
@@ -307,3 +308,9 @@ export const PROJECTS: Project[] = [
     date: '2024-04-20'
   }
 ];
+
+export const PROJECTS: Project[] = PROJECT_DATA.map(project => {
+  const details = PROJECT_SUMMARIES[project.id];
+  if (!details) throw new Error(`Missing project summary: ${project.id}`);
+  return { ...project, ...details };
+});

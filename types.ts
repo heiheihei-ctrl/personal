@@ -8,6 +8,13 @@ export enum ProjectCategory {
 }
 
 export interface Project {
+  summary: {
+    problem: string;
+    responsibility: string;
+    techStack: string[];
+    result: string;
+  };
+  implementation: string[];
   id: string;
   title: string;
   description: string;
