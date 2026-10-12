@@ -7,6 +7,7 @@ function details(problem: string, responsibility: string, techStack: string[], r
 }
 
 export const PROJECT_SUMMARIES: Record<string, ProjectDetails> = {
+  'workbuddy-mcp-connector': details('WorkBuddy 需要接入外部工具以扩展 AI 助手能力', '首次接触 MCP 集成，独立完成连接器开发与联调', ['WorkBuddy', 'MCP', '工具集成'], '成功接入 SuperBox，8 个工具全部启用', ['调研 MCP 接入方式，独立开发 WorkBuddy MCP 工具连接器。', '配置并联调 SuperBox MCP 服务，验证连接状态及 8 个工具均成功启用。']),
   'carve-site': details('跨境品牌需要完整的线上交易流程', '独立站定制与前后端接口集成', ['React', 'Node.js', 'Shopify API', 'GraphQL'], '串联商品展示、库存查询与订单创建', ['使用 React 构建商品浏览界面，并适配移动端布局。', '通过 Node.js 对接 Shopify API 与 GraphQL，衔接商品、库存和订单流程。']),
   'armorlite-site': details('防护品牌需要按设计稿搭建电商网站', 'Shopify 主题定制与设计还原', ['Shopify CLI', 'Liquid'], '交付适配桌面与移动端的品牌商城', ['通过 Shopify CLI 开展主题本地开发与调试。', '定制 Liquid 模板与响应式布局，还原产品展示及页面交互。']),
   'posefootwear-site': details('鞋履品牌需要面向全球展示与销售', '品牌页面与购物流程定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '完成品牌、产品与活动内容的统一展示', ['基于 Shopify 主题组织新品、场景分类及活动专区。', '使用 TailwindCSS 适配桌面和移动端，调整产品浏览与购物交互。']),

@@ -84,6 +84,9 @@ import xmglxt4 from './assets/web/xmglxt/4.png';
 import zxjkxt1 from './assets/web/zxjkxt/1.jpg';
 import hfcjcxt1 from './assets/web/hfcjcxt/1.png';
 
+// MCP 工具集成项目图片
+import superboxMcp from './assets/mcp/superbox.png';
+
 // H5 图片导入
 import ffl1 from './assets/h5/hdyx/ffl1.jpg';
 import ffl2 from './assets/h5/hdyx/ffl2.jpg';
@@ -107,6 +110,16 @@ import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
 import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
 const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
+  {
+    id: 'workbuddy-mcp-connector',
+    title: 'WorkBuddy MCP 工具连接器',
+    description: '为 WorkBuddy 扩展外部工具能力，独立开发 MCP 连接器并完成 SuperBox 服务接入。\n\n首次接触 MCP 集成后，我独立完成从技术调研、连接器开发到 WorkBuddy 配置与联调验证的完整流程。最终 SuperBox 服务成功启用，8 个工具全部可用。',
+    category: ProjectCategory.AI_INTEGRATION,
+    images: [superboxMcp],
+    link: '#',
+    tags: ['WorkBuddy', 'MCP', '工具集成', '独立开发'],
+    date: '2026-10-11'
+  },
   {
     id: 'carve-site',
     title: '"Carve" 跨境电商独立站',

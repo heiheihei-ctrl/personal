@@ -4,7 +4,8 @@ export enum ProjectCategory {
   MINI_PROGRAM = '小程序',
   H5 = 'H5',
   SHOPIFY = 'Shopify',
-  WEB = 'Web'
+  WEB = 'Web',
+  AI_INTEGRATION = 'AI工具集成'
 }
 
 export interface Project {
