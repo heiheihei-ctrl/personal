@@ -31,7 +31,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <dl className="text-sm leading-5 space-y-2 mb-2">
           <div className="flex gap-3 h-5"><dt className="shrink-0 text-slate-400">问题</dt><dd className="text-slate-600 line-clamp-1" title={project.summary.problem}>{project.summary.problem}</dd></div>
           <div className="flex gap-3 h-5"><dt className="shrink-0 text-slate-400">职责</dt><dd className="text-slate-600 line-clamp-1" title={project.summary.responsibility}>{project.summary.responsibility}</dd></div>
-          <div className="flex gap-3 h-6"><dt className="shrink-0 text-slate-400">技术</dt><dd className="flex gap-1 min-w-0 overflow-x-auto">{project.summary.techStack.map(tech => <span key={tech} className="px-2 py-0.5 bg-blue-50 text-blue-700 text-xs font-medium rounded whitespace-nowrap">{tech}</span>)}</dd></div>
+          <div className="flex items-center gap-3 h-6"><dt className="shrink-0 text-slate-400">技术</dt><dd className="flex items-center gap-1 h-full min-w-0 overflow-x-auto">{project.summary.techStack.map(tech => <span key={tech} className="inline-flex items-center justify-center shrink-0 h-6 px-2 bg-blue-50 text-blue-700 text-xs font-medium rounded whitespace-nowrap">{tech}</span>)}</dd></div>
           <div className="flex gap-3 h-5"><dt className="shrink-0 text-slate-400">结果</dt><dd className="text-slate-600 line-clamp-1" title={project.summary.result}>{project.summary.result}</dd></div>
         </dl>
         
