@@ -110,7 +110,7 @@ const About: React.FC = () => {
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
                 <div className="flex flex-col md:flex-row md:justify-between mb-2">
                   <h3 className="text-xl font-bold text-slate-900">深圳市三合软件有限公司</h3>
-                  <span className="text-slate-500 font-semibold">2023.06 - 2023.12</span>
+                  <span className="text-slate-500 font-semibold">2023.06 - 2025.05</span>
                 </div>
                 <p className="text-slate-500 font-medium mb-3 italic">前端开发工程师</p>
                 <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
