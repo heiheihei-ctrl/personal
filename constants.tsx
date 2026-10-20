@@ -50,11 +50,6 @@ import lxxd12 from './assets/xcx/lxxd/12.png';
 import carve1 from './assets/shopify/carve/1.png';
 import carve2 from './assets/shopify/carve/2.png';
 import carve3 from './assets/shopify/carve/3.png';
-import armorLite1 from './assets/shopify/armorLite/1.png';
-import armorLite2 from './assets/shopify/armorLite/2.png';
-import armorLite3 from './assets/shopify/armorLite/3.png';
-import armorLite4 from './assets/shopify/armorLite/4.png';
-import armorLite5 from './assets/shopify/armorLite/5.png';
 import posefootwear1 from './assets/shopify/posefootwear/1.png';
 import posefootwear2 from './assets/shopify/posefootwear/2.png';
 import posefootwear3 from './assets/shopify/posefootwear/3.png';
@@ -130,16 +125,6 @@ const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
     link: 'http://47.254.67.102:9090/',
     tags: ['React', 'Node.js', 'Shopify API', 'GraphQL', 'TailwindCSS'],
     date: '2025-09-20'
-  },
-  {
-    id: 'armorlite-site',
-    title: '"ArmorLite" Shopify 电商网站',
-    description: '🛡️ 专业的防护产品电商独立站，基于 Shopify CLI 开发，高度还原设计稿的精品项目。\n\n✨ 技术亮点：\n• 使用 Shopify CLI 进行本地开发与调试，提升开发效率\n• 基于 Shopify 主题系统深度定制，实现精准还原设计稿\n• 响应式设计完美适配各设备，确保移动端与桌面端体验一致\n• 优化产品展示流程，提升用户购物体验与转化率\n\n🎨 设计还原：严格按照设计稿进行开发，从布局到交互细节，高度还原设计师的视觉呈现。\n\n🎯 业务价值：为防护产品品牌提供专业的电商平台，展示产品特性与优势，助力品牌在线销售。',
-    category: ProjectCategory.SHOPIFY,
-    images: [armorLite1, armorLite2, armorLite3, armorLite4, armorLite5],
-    link: '#',
-    tags: ['Shopify CLI', 'Liquid', '响应式设计', '设计还原', '电商'],
-    date: '2026-03-06'
   },
   {
     id: 'posefootwear-site',

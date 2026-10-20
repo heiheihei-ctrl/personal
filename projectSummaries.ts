@@ -9,7 +9,6 @@ function details(problem: string, responsibility: string, techStack: string[], r
 export const PROJECT_SUMMARIES: Record<string, ProjectDetails> = {
   'workbuddy-mcp-connector': details('管理人员需要高效统计经营数据、分析订单并及时发现异常', '独立完成连接器开发、配置与端到端联调', ['WorkBuddy', 'MCP', '订单分析', '数据可视化'], '支持订单查询、异常排查、数据统计及图表报告生成，减少人工检索与整理', ['调研 MCP 接入方式，独立开发 WorkBuddy MCP 工具连接器并接入 SuperBox。', '在 WorkBuddy 中调用订单工具，支持查询订单、汇总经营指标及排查异常订单。', '根据订单数据生成趋势图表与分析报告，完成端到端验证；SuperBox 的 8 个工具全部启用。']),
   'carve-site': details('跨境品牌需要完整的线上交易流程', '独立站定制与前后端接口集成', ['React', 'Node.js', 'Shopify API', 'GraphQL'], '串联商品展示、库存查询与订单创建', ['使用 React 构建商品浏览界面，并适配移动端布局。', '通过 Node.js 对接 Shopify API 与 GraphQL，衔接商品、库存和订单流程。']),
-  'armorlite-site': details('防护品牌需要按设计稿搭建电商网站', 'Shopify 主题定制与设计还原', ['Shopify CLI', 'Liquid'], '交付适配桌面与移动端的品牌商城', ['通过 Shopify CLI 开展主题本地开发与调试。', '定制 Liquid 模板与响应式布局，还原产品展示及页面交互。']),
   'posefootwear-site': details('鞋履品牌需要面向全球展示与销售', '品牌页面与购物流程定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '完成品牌、产品与活动内容的统一展示', ['基于 Shopify 主题组织新品、场景分类及活动专区。', '使用 TailwindCSS 适配桌面和移动端，调整产品浏览与购物交互。']),
   'bluebox-jp-site': details('睡眠品牌需要日本市场专属独立站', 'Shopify 主题与品牌页面定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '交付适配日本市场的品牌电商门户', ['使用 Shopify CLI 本地开发，定制品牌与产品展示模板。', '结合 TailwindCSS 调整响应式布局及日本市场购物流程。']),
   'ziraspark-csfq': details('发饰品牌需要还原 Figma 电商设计', '主题开发、设计还原与交互实现', ['Shopify CLI', 'Liquid'], '完成首页、商品及服务页面定制', ['将 Figma 设计转为 Liquid 主题模板，覆盖首页、商品详情及服务页面。', '实现变体选择、FAQ 展开和关联推荐，并适配移动端。']),
