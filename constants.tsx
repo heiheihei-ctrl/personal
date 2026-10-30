@@ -80,8 +80,6 @@ import zxjkxt1 from './assets/web/zxjkxt/1.jpg';
 import hfcjcxt1 from './assets/web/hfcjcxt/1.png';
 
 // MCP 工具集成项目图片
-import superboxMcp from './assets/mcp/superbox/1.png';
-import superboxAnalysis from './assets/mcp/superbox/2.png';
 
 // H5 图片导入
 import ffl1 from './assets/h5/hdyx/ffl1.jpg';
@@ -106,16 +104,6 @@ import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
 import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
 const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
-  {
-    id: 'workbuddy-mcp-connector',
-    title: 'WorkBuddy MCP 工具连接器',
-    description: '面向管理人员的日常经营分析场景，独立开发 WorkBuddy MCP 工具连接器并接入 SuperBox，让管理人员可在 WorkBuddy 中查询订单、统计经营数据、排查异常订单，并生成图表分析报告。\n\n独立完成技术调研、连接器开发、服务配置与端到端联调。接入后，管理人员可将分散的订单查询、数据汇总与报告整理集中到 WorkBuddy 中完成，减少人工检索和汇总工作，提升订单分析与管理效率。',
-    category: ProjectCategory.AI_INTEGRATION,
-    images: [superboxMcp, superboxAnalysis],
-    link: '#',
-    tags: ['WorkBuddy', 'MCP', '订单分析', '数据可视化', '独立开发'],
-    date: '2026-10-11'
-  },
   {
     id: 'carve-site',
     title: '"Carve" 跨境电商独立站',

@@ -4,7 +4,6 @@ export enum ProjectCategory {
   WEB = 'Web',
   H5 = 'H5',
   SHOPIFY = 'Shopify',
-  AI_INTEGRATION = 'AI工具集成',
   UI_DESIGN = 'UI设计'
 }
 
