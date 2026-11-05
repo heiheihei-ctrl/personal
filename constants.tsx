@@ -1,6 +1,7 @@
 
 import { Project, ProjectCategory } from './types';
 import { PROJECT_SUMMARIES } from './projectSummaries';
+import packagingCover from './assets/vibe-coding/packaging.svg';
 
 // 航小鹭小程序图片导入
 import cjh1 from './assets/xcx/cjh/1.jpg';
@@ -104,6 +105,16 @@ import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
 import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
 const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
+  {
+    id: 'packaging-workshop',
+    title: '刀版工坊 · 3D 包装盒预览',
+    description: '把平面的包装设计，变成可以旋转查看的立体盒子。刀版工坊是一款在线包装盒预览工具，将 2D 刀版与 3D 成型效果放在同一界面，让结构、尺寸和贴图的调整更加直观。\n\n核心功能：\n• 2D / 3D 对照：一边查看展开刀版、裁切线与折线，一边观察包装盒的立体效果\n• 自定义尺寸：调整宽、高、深与插舌尺寸，也可使用预设盒型快速开始\n• 贴图替换：换上自己的包装图案，预览设计在盒体上的呈现效果\n• 折叠演示：通过折叠进度查看从展开平铺、盒身立起到封盖成形的变化\n• 自由查看：拖动旋转、滚轮缩放，双击复位视角，从不同角度检查设计\n• SVG 导出：将刀版图导出为矢量文件，便于后续设计调整\n\n适用场景：\n用于包装创意探索、贴图方案比较与结构演示，让设计师和品牌方在打样前更直观地沟通包装效果。\n\n这是我的第一个 Vibe Coding 作品：从一个具体的设计需求出发，用 AI 辅助编程把想法做成可直接体验的在线工具。',
+    category: ProjectCategory.VIBE_CODING,
+    images: [packagingCover],
+    link: 'https://packaging-10mogskr01ms.maozi.io/',
+    tags: ['Vibe Coding', '3D 预览', '包装设计', '贴图替换', 'SVG 导出'],
+    date: '2026-11-05'
+  },
   {
     id: 'carve-site',
     title: '"Carve" 跨境电商独立站',

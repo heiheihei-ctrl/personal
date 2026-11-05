@@ -7,12 +7,15 @@ import ProjectCard from '../components/ProjectCard';
 const Home: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | '全部'>('全部');
 
-  const categories = ['全部', ...Object.values(ProjectCategory)];
+  const categories: (ProjectCategory | '全部')[] = [ProjectCategory.VIBE_CODING, '全部', ...Object.values(ProjectCategory).filter(category => category !== ProjectCategory.VIBE_CODING)];
 
   const filteredProjects = (selectedCategory === '全部' 
-    ? PROJECTS 
+    ? [...PROJECTS]
     : PROJECTS.filter(p => p.category === selectedCategory)
-  ).sort((a, b) => b.date.localeCompare(a.date));
+  ).sort((a, b) =>
+    Number(b.category === ProjectCategory.VIBE_CODING) - Number(a.category === ProjectCategory.VIBE_CODING)
+    || b.date.localeCompare(a.date)
+  );
 
   return (
     <main className="min-h-screen">
@@ -50,7 +53,8 @@ const Home: React.FC = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setSelectedCategory(cat as any)}
+              onClick={() => setSelectedCategory(cat)}
+              aria-pressed={selectedCategory === cat}
               className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all whitespace-nowrap ${
                 selectedCategory === cat 
                   ? 'bg-slate-900 text-white shadow-xl shadow-slate-200 ring-4 ring-slate-100' 
@@ -61,6 +65,13 @@ const Home: React.FC = () => {
             </button>
           ))}
         </div>
+
+        {selectedCategory === ProjectCategory.VIBE_CODING && (
+          <div className="mt-4 mb-8 text-center">
+            <h2 className="text-3xl font-extrabold text-slate-900">Vibe Coding</h2>
+            <p className="mt-3 text-slate-500 leading-relaxed">把灵感变成可以亲手体验的小工具，探索 AI 辅助编程的更多可能。</p>
+          </div>
+        )}
 
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">

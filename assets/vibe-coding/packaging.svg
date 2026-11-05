@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <title>刀版工坊：2D 刀版与 3D 包装盒预览示意</title>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#B4C5AC" stroke-opacity=".08"/></pattern>
+    <linearGradient id="front" x1="760" y1="230" x2="1050" y2="560" gradientUnits="userSpaceOnUse"><stop stop-color="#285844"/><stop offset="1" stop-color="#143A2F"/></linearGradient>
+    <linearGradient id="bg" x2="1200" y2="675" gradientUnits="userSpaceOnUse"><stop stop-color="#25251F"/><stop offset="1" stop-color="#10120F"/></linearGradient>
+  </defs>
+  <rect width="1200" height="675" rx="24" fill="url(#bg)"/>
+  <rect width="1200" height="675" rx="24" fill="url(#grid)"/>
+  <g font-family="'Microsoft YaHei', 'PingFang SC', sans-serif">
+    <path d="M48 53H86M67 34V72" stroke="#DB4C6B" stroke-width="5"/>
+    <text x="106" y="64" fill="#F3EEDD" font-size="32" font-weight="700">刀版工坊</text>
+    <text x="49" y="111" fill="#A7A593" font-size="18">让平面的设计，立体呈现。</text>
+    <rect x="958" y="40" width="194" height="40" rx="20" fill="#DB4C6B" fill-opacity=".15" stroke="#DB4C6B" stroke-opacity=".5"/>
+    <text x="1055" y="66" text-anchor="middle" fill="#EE9CAE" font-size="16" letter-spacing="2">VIBE CODING / 01</text>
+    <rect x="48" y="155" width="520" height="405" rx="12" fill="#EEE9D9"/>
+    <path d="M260 190H335V213H355V285H425V455H355V524H335V542H260V524H240V455H95V285H240V213H260Z" fill="#214C3D" stroke="#D54667" stroke-width="3"/>
+    <rect x="95" y="190" width="330" height="352" fill="url(#grid)"/>
+    <path d="M240 285H425M240 455H355M240 213H355M240 524H355M165 285V455M240 285V455M355 285V455" stroke="#48A291" stroke-width="2" stroke-dasharray="8 6"/>
+    <circle cx="296" cy="369" r="47" stroke="#C7CBAA" stroke-opacity=".5"/>
+    <text x="296" y="369" text-anchor="middle" fill="#EDEBD1" font-size="27" font-weight="700">NO.01</text>
+    <text x="296" y="391" text-anchor="middle" fill="#C7CBAA" font-size="9" letter-spacing="2">CROSS BOX</text>
+    <text x="72" y="185" fill="#7A7A6C" font-size="12" letter-spacing="2">2D / 刀版展开</text>
+    <path d="M600 355H642M630 343L642 355L630 367" stroke="#A6AB99" stroke-width="2"/>
+    <path d="M722 234L957 191L1080 267L838 315Z" fill="#32624C" stroke="#59816A" stroke-opacity=".4"/>
+    <path d="M722 234L838 315V568L722 475Z" fill="#173C30" stroke="#59816A" stroke-opacity=".3"/>
+    <path d="M838 315L1080 267V515L838 568Z" fill="url(#front)" stroke="#59816A" stroke-opacity=".4"/>
+    <path d="M838 315L1080 267V515L838 568Z" fill="url(#grid)"/>
+    <g transform="matrix(1 -.21 0 1 850 334)">
+      <circle cx="108" cy="112" r="83" stroke="#CBD0AA" stroke-opacity=".4" stroke-width="2"/>
+      <circle cx="108" cy="112" r="93" stroke="#CBD0AA" stroke-opacity=".15"/>
+      <text x="108" y="113" text-anchor="middle" fill="#EDEBD1" font-size="44" font-weight="700">NO.01</text>
+      <text x="108" y="144" text-anchor="middle" fill="#B7C3A3" font-size="16" letter-spacing="3">CROSS BOX</text>
+      <circle cx="108" cy="168" r="5" fill="#D7694F"/>
+    </g>
+    <text x="770" y="175" fill="#A7A593" font-size="12" letter-spacing="2">3D / 成型预览</text>
+    <path d="M48 598H1152" stroke="#45483D"/>
+    <text x="49" y="637" fill="#BCBDAA" font-size="17">尺寸调整</text>
+    <text x="195" y="637" fill="#BCBDAA" font-size="17">贴图替换</text>
+    <text x="341" y="637" fill="#BCBDAA" font-size="17">折叠演示</text>
+    <text x="487" y="637" fill="#BCBDAA" font-size="17">SVG 导出</text>
+    <text x="1152" y="637" text-anchor="end" fill="#A7A593" font-size="14">PACKAGING EXPLORER ↗</text>
+  </g>
+</svg>

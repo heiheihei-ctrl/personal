@@ -1,5 +1,6 @@
 
 export enum ProjectCategory {
+  VIBE_CODING = 'Vibe Coding',
   MINI_PROGRAM = '小程序',
   WEB = 'Web',
   H5 = 'H5',

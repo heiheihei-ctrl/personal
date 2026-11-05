@@ -7,6 +7,7 @@ function details(problem: string, responsibility: string, techStack: string[], r
 }
 
 export const PROJECT_SUMMARIES: Record<string, ProjectDetails> = {
+  'packaging-workshop': details('平面包装图难以直观呈现成盒效果', 'Vibe Coding 包装预览工具创作', ['3D 可视化', 'SVG', '贴图映射'], '在线调整尺寸、替换贴图并预览盒型', ['以 2D 刀版与 3D 盒体对照展示包装结构，标示裁切线与折线。', '提供尺寸参数、预设盒型与贴图替换入口，方便比较不同包装方案。', '通过折叠进度演示成盒过程，结合旋转、缩放与 SVG 导出衔接预览和后续设计。']),
   'carve-site': details('跨境品牌需要完整的线上交易流程', '独立站定制与前后端接口集成', ['React', 'Node.js', 'Shopify API', 'GraphQL'], '串联商品展示、库存查询与订单创建', ['使用 React 构建商品浏览界面，并适配移动端布局。', '通过 Node.js 对接 Shopify API 与 GraphQL，衔接商品、库存和订单流程。']),
   'posefootwear-site': details('鞋履品牌需要面向全球展示与销售', '品牌页面与购物流程定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '完成品牌、产品与活动内容的统一展示', ['基于 Shopify 主题组织新品、场景分类及活动专区。', '使用 TailwindCSS 适配桌面和移动端，调整产品浏览与购物交互。']),
   'bluebox-jp-site': details('睡眠品牌需要日本市场专属独立站', 'Shopify 主题与品牌页面定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '交付适配日本市场的品牌电商门户', ['使用 Shopify CLI 本地开发，定制品牌与产品展示模板。', '结合 TailwindCSS 调整响应式布局及日本市场购物流程。']),
