@@ -7,7 +7,7 @@ import ProjectCard from '../components/ProjectCard';
 const Home: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | '全部'>('全部');
 
-  const categories: (ProjectCategory | '全部')[] = [ProjectCategory.VIBE_CODING, '全部', ...Object.values(ProjectCategory).filter(category => category !== ProjectCategory.VIBE_CODING)];
+  const categories: (ProjectCategory | '全部')[] = ['全部', ...Object.values(ProjectCategory)];
 
   const filteredProjects = (selectedCategory === '全部' 
     ? [...PROJECTS]
