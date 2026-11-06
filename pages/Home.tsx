@@ -66,13 +66,6 @@ const Home: React.FC = () => {
           ))}
         </div>
 
-        {selectedCategory === ProjectCategory.VIBE_CODING && (
-          <div className="mt-4 mb-8 text-center">
-            <h2 className="text-3xl font-extrabold text-slate-900">Vibe Coding</h2>
-            <p className="mt-3 text-slate-500 leading-relaxed">把灵感变成可以亲手体验的小工具，探索 AI 辅助编程的更多可能。</p>
-          </div>
-        )}
-
         {/* Project Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
           {filteredProjects.length > 0 ? (
