@@ -48,6 +48,11 @@ import lxxd11 from './assets/xcx/lxxd/11.png';
 import lxxd12 from './assets/xcx/lxxd/12.png';
 
 // Shopify 图片导入
+import formadeCover from './assets/shopify/formade/cover.webp';
+import formadeHome from './assets/shopify/formade/home.webp';
+import formadeCategories from './assets/shopify/formade/categories.webp';
+import formadeProduct from './assets/shopify/formade/product-detail.webp';
+import formadeCollection from './assets/shopify/formade/basketball-collection.webp';
 import carve1 from './assets/shopify/carve/1.png';
 import carve2 from './assets/shopify/carve/2.png';
 import carve3 from './assets/shopify/carve/3.png';
@@ -105,6 +110,21 @@ import gongchaVideo1 from './assets/h5/gongcha/1696946262687.mp4';
 import gongchaVideo2 from './assets/h5/gongcha/1696950113062.mp4';
 
 const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
+  {
+    id: 'formade-sports',
+    title: 'Formade 运动装备品牌独立站',
+    description: [
+      '🏀 Formade 运动装备品牌的 Shopify 独立站，围绕篮球、足球、排球、美式橄榄球与匹克球等运动品类，串联品牌展示、分类选购与商品详情，呈现鲜明的竞技运动风格。',
+      '🎨 视觉特色：\n• 以黑白为基础色，搭配金色公告栏、分类区块与品牌标识，建立统一的视觉层次\n• 大幅球场场景、运动影像与球体材质特写结合，突出运动氛围和产品质感\n• 使用醒目的窄体粗字标题、留白与整齐的商品网格，让品牌内容和选购信息清晰呈现',
+      '🛍️ 页面与功能：\n• 首页整合运动主视觉、品牌介绍、热销分类切换、用户评价、品牌故事与资讯内容\n• 通过多运动分类入口组织产品，篮球专题进一步区分竞赛、比赛、训练与个性化定制系列\n• 提供按尺码选购入口，结合分组商品列表与横向浏览，帮助用户找到适合的装备\n• 商品详情采用缩略图图库与大图展示，集中呈现价格、尺码、数量、库存提示及加购和快捷支付入口\n• 通过材质卖点、场景图文、页内导航与关联商品推荐，衔接产品了解和后续选购\n• 配套定制装备、组合购买、邮件订阅与品牌内容入口，覆盖不同的浏览需求',
+      '🎯 项目价值：\n将品牌运动形象与电商选购路径结合，让用户从运动场景进入具体品类，再通过商品细节、规格与推荐内容完成选购决策。'
+    ].join('\n\n'),
+    category: ProjectCategory.SHOPIFY,
+    images: [formadeCover, formadeHome, formadeCategories, formadeProduct, formadeCollection],
+    link: 'https://formadesports.com/',
+    tags: ['Shopify', '运动装备', '品牌视觉', '分类选购', '商品详情'],
+    date: '2026-11-19'
+  },
   {
     id: 'packaging-workshop',
     title: '刀版工坊 · 3D 包装盒预览',

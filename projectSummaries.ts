@@ -7,6 +7,17 @@ function details(problem: string, responsibility: string, techStack: string[], r
 }
 
 export const PROJECT_SUMMARIES: Record<string, ProjectDetails> = {
+  'formade-sports': details(
+    '运动品牌需要整合多品类展示与选购',
+    '品牌页面、分类与商品详情定制',
+    ['Shopify', '商品图库', '分类导航'],
+    '串联品牌展示、装备分类与商品选购',
+    [
+      '以黑白金配色、运动场景主视觉和产品特写统一页面风格，组织首页品牌介绍、热销商品与资讯内容。',
+      '按运动项目划分产品入口，篮球专题结合使用场景、尺码与个性化定制入口组织选购路径。',
+      '商品详情围绕图片浏览、规格选择、数量调整与加购入口展开，配合材质介绍、页内导航和关联推荐呈现产品信息。'
+    ]
+  ),
   'packaging-workshop': details('平面包装图难以直观呈现成盒效果', 'Vibe Coding 包装预览工具创作', ['3D 可视化', 'SVG', '贴图映射'], '在线调整尺寸、替换贴图并预览盒型', ['以 2D 刀版与 3D 盒体对照展示包装结构，标示裁切线与折线。', '提供尺寸参数、预设盒型与贴图替换入口，方便比较不同包装方案。', '通过折叠进度演示成盒过程，结合旋转、缩放与 SVG 导出衔接预览和后续设计。']),
   'carve-site': details('跨境品牌需要完整的线上交易流程', '独立站定制与前后端接口集成', ['React', 'Node.js', 'Shopify API', 'GraphQL'], '串联商品展示、库存查询与订单创建', ['使用 React 构建商品浏览界面，并适配移动端布局。', '通过 Node.js 对接 Shopify API 与 GraphQL，衔接商品、库存和订单流程。']),
   'posefootwear-site': details('鞋履品牌需要面向全球展示与销售', '品牌页面与购物流程定制', ['Shopify CLI', 'Liquid', 'TailwindCSS'], '完成品牌、产品与活动内容的统一展示', ['基于 Shopify 主题组织新品、场景分类及活动专区。', '使用 TailwindCSS 适配桌面和移动端，调整产品浏览与购物交互。']),
