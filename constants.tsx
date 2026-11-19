@@ -49,10 +49,9 @@ import lxxd12 from './assets/xcx/lxxd/12.png';
 
 // Shopify 图片导入
 import formadeCover from './assets/shopify/formade/cover.webp';
-import formadeHome from './assets/shopify/formade/home.webp';
-import formadeCategories from './assets/shopify/formade/categories.webp';
-import formadeProduct from './assets/shopify/formade/product-detail.webp';
-import formadeCollection from './assets/shopify/formade/basketball-collection.webp';
+import formadeProduct from './assets/shopify/formade/product-full.png';
+import formadeCollection from './assets/shopify/formade/basketball-full.png';
+import formadeHome from './assets/shopify/formade/home-full.png';
 import carve1 from './assets/shopify/carve/1.png';
 import carve2 from './assets/shopify/carve/2.png';
 import carve3 from './assets/shopify/carve/3.png';
@@ -120,7 +119,7 @@ const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
       '🎯 项目价值：\n将品牌运动形象与电商选购路径结合，让用户从运动场景进入具体品类，再通过商品细节、规格与推荐内容完成选购决策。'
     ].join('\n\n'),
     category: ProjectCategory.SHOPIFY,
-    images: [formadeCover, formadeHome, formadeCategories, formadeProduct, formadeCollection],
+    images: [formadeCover, formadeProduct, formadeCollection, formadeHome],
     link: 'https://formadesports.com/',
     tags: ['Shopify', '运动装备', '品牌视觉', '分类选购', '商品详情'],
     date: '2026-11-19'

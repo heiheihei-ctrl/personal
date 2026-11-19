@@ -12,10 +12,7 @@ const Home: React.FC = () => {
   const filteredProjects = (selectedCategory === '全部' 
     ? [...PROJECTS]
     : PROJECTS.filter(p => p.category === selectedCategory)
-  ).sort((a, b) =>
-    Number(b.category === ProjectCategory.VIBE_CODING) - Number(a.category === ProjectCategory.VIBE_CODING)
-    || b.date.localeCompare(a.date)
-  );
+  ).sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <main className="min-h-screen">
