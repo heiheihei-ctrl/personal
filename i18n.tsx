@@ -1,6 +1,6 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import type { BlogPost, Project } from './types';
-import { EN_BLOG, EN_BLOG_CONTENT, EN_PROJECTS } from './en';
+import type { Project } from './types';
+import { EN_PROJECTS } from './en';
 
 export type Language = 'zh' | 'en';
 
@@ -13,7 +13,6 @@ const zh = {
   nav: {
     work: '作品集',
     about: '关于我',
-    blog: '博客',
     switchLabel: '切换语言',
   },
   categories: {
@@ -35,40 +34,7 @@ const zh = {
       '🚀 三年开发实战，独立交付 20+ 线上项目',
       '✨ 用技术驱动业务增长，让你的店铺更快、更好用、更好卖',
     ],
-    available: '✨ 可接新项目',
-    servicesTitle: '我能帮你做什么',
-    servicesSub: '电商建站为主，也能处理线上问题和 AI 集成。',
-    servicesCta: '聊聊你的项目 →',
-    services: [
-      {
-        icon: '🛍️',
-        title: 'Shopify 独立站',
-        desc: '主题定制、Shopify CLI、Liquid、Storefront API 与结账流程，从 0 到上线。',
-        tags: ['Shopify CLI', 'Liquid', 'Storefront API'],
-      },
-      {
-        icon: '🌐',
-        title: 'WordPress / WooCommerce',
-        desc: '主题与子主题开发、WooCommerce、支付物流配置、性能优化和后台交付。',
-        tags: ['WordPress', 'WooCommerce', 'PHP'],
-      },
-      {
-        icon: '🐞',
-        title: '修 Bug / 性能优化',
-        desc: 'HTML/CSS/JS、React、Vue、PHP 线上问题排查，快速定位并给出修复方案。',
-        tags: ['React', 'Vue', 'PHP'],
-      },
-      {
-        icon: '🤖',
-        title: 'AI Agent / MCP',
-        desc: '可视化工作流、多模型接入、MCP 工具连接器，把业务数据接进 AI 助手。',
-        tags: ['MCP', 'AI workflow', 'Node.js'],
-      },
-    ],
-    workTitle: '精选作品',
-    workSub: 'Shopify 案例优先展示，向下还有 Web、小程序与 H5。',
     empty: '😊 该分类下暂无作品，更多项目正在整理。',
-    projectsCount: (n: number) => `${n} 个项目`,
   },
   card: {
     problem: '问题',
@@ -182,33 +148,10 @@ const zh = {
       { school: '🎓 郴州技师学院 (预备技师班)', major: '计算机网络技术' },
     ],
   },
-  blog: {
-    title: '技术博客',
-    sub: '记录 Shopify、前端性能与工程实践。',
-    h1a: '记录',
-    h1b: '开发思考',
-    h1c: '与实践经验',
-    all: '全部',
-    readTime: (n: number) => `${n} 分钟阅读`,
-    readMore: '阅读全文',
-    author: '作者：YY（钱盈熠）',
-    related: '📚 相关文章',
-    back: '返回博客',
-    more: '浏览更多文章',
-    notFound: '😔 未找到该文章',
-    backList: '返回博客列表',
-    englishNote: '本文正文为中文，欢迎通过邮件交流英文版本。',
-    categories: {
-      '前端开发': '前端开发',
-      Shopify: 'Shopify',
-      '技术笔记': '技术笔记',
-    } as Record<string, string>,
-  },
   footer: {
     tagline: 'Driven by curiosity, powered by code. 致力于创造有温度的数字产品。',
     quickLinks: '快速链接',
     work: '作品合集',
-    blog: '技术博客',
     about: '关于我',
     social: '社交网络',
     wechatTip: '扫码添加微信',
@@ -227,7 +170,6 @@ const en: typeof zh = {
   nav: {
     work: 'Work',
     about: 'About',
-    blog: 'Blog',
     switchLabel: 'Switch language',
   },
   categories: {
@@ -249,40 +191,7 @@ const en: typeof zh = {
       '🚀 3 years of hands-on delivery across 20+ live projects',
       '✨ Faster stores, cleaner UX and measurable conversion gains',
     ],
-    available: '✨ Available for new projects',
-    servicesTitle: 'What I do',
-    servicesSub: 'E-commerce first, with bug fixing and AI integrations when you need them.',
-    servicesCta: 'Tell me about your project →',
-    services: [
-      {
-        icon: '🛍️',
-        title: 'Shopify storefronts',
-        desc: 'Custom themes, Shopify CLI, Liquid, Storefront API and checkout flows — from zero to launch.',
-        tags: ['Shopify CLI', 'Liquid', 'Storefront API'],
-      },
-      {
-        icon: '🌐',
-        title: 'WordPress / WooCommerce',
-        desc: 'Theme and child-theme development, WooCommerce, payments, shipping, speed optimization and admin handover.',
-        tags: ['WordPress', 'WooCommerce', 'PHP'],
-      },
-      {
-        icon: '🐞',
-        title: 'Bug fixes & performance',
-        desc: 'HTML/CSS/JS, React, Vue and PHP issues traced fast, with a clear fix and a short explanation.',
-        tags: ['React', 'Vue', 'PHP'],
-      },
-      {
-        icon: '🤖',
-        title: 'AI agents & MCP',
-        desc: 'Visual workflows, multi-model integrations and MCP connectors that bring business data into AI assistants.',
-        tags: ['MCP', 'AI workflow', 'Node.js'],
-      },
-    ],
-    workTitle: 'Selected work',
-    workSub: 'Shopify case studies first, followed by web apps, mini programs and H5.',
     empty: '😊 No projects in this category yet — more are on the way.',
-    projectsCount: (n: number) => `${n} projects`,
   },
   card: {
     problem: 'Problem',
@@ -396,33 +305,10 @@ const en: typeof zh = {
       { school: '🎓 Chenzhou Technician College (Preparatory Technician)', major: 'Computer Network Technology' },
     ],
   },
-  blog: {
-    title: 'Blog',
-    sub: 'Notes on Shopify, front-end performance and engineering practice.',
-    h1a: 'Notes on ',
-    h1b: 'building',
-    h1c: ' real products',
-    all: 'All',
-    readTime: (n: number) => `${n} min read`,
-    readMore: 'Read article',
-    author: 'By YY (Yingyi Qian)',
-    related: '📚 Related articles',
-    back: 'Back to blog',
-    more: 'Browse more articles',
-    notFound: '😔 Article not found',
-    backList: 'Back to blog',
-    englishNote: 'The article body is in Chinese. Email me if you would like an English version.',
-    categories: {
-      '前端开发': 'Frontend',
-      Shopify: 'Shopify',
-      '技术笔记': 'Notes',
-    } as Record<string, string>,
-  },
   footer: {
     tagline: 'Driven by curiosity, powered by code. Building digital products with care.',
     quickLinks: 'Quick links',
     work: 'Work',
-    blog: 'Blog',
     about: 'About',
     social: 'Social',
     wechatTip: 'Scan to add me on WeChat',
@@ -500,24 +386,6 @@ export function localizeProject(project: Project, lang: Language): Project {
 export function useLocalizedProject(project: Project): Project {
   const { lang } = useI18n();
   return localizeProject(project, lang);
-}
-
-export function localizePost(post: BlogPost, lang: Language): BlogPost {
-  if (lang === 'zh') return post;
-  const translated = EN_BLOG[post.id];
-  if (!translated) return post;
-  return {
-    ...post,
-    title: translated.title,
-    excerpt: translated.excerpt,
-    tags: translated.tags,
-    content: EN_BLOG_CONTENT[post.id] ?? post.content,
-  };
-}
-
-export function useLocalizedPost(post: BlogPost): BlogPost {
-  const { lang } = useI18n();
-  return localizePost(post, lang);
 }
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

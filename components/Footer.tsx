@@ -18,7 +18,6 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <p className="text-white text-xs uppercase tracking-widest font-bold opacity-50">{m.footer.quickLinks}</p>
               <Link to="/" className="block hover:text-blue-400 transition-colors">{m.footer.work}</Link>
-              <Link to="/blog" className="block hover:text-blue-400 transition-colors">{m.footer.blog}</Link>
               <Link to="/about" className="block hover:text-blue-400 transition-colors">{m.footer.about}</Link>
             </div>
             <div className="space-y-3">

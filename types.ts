@@ -31,22 +31,3 @@ export function formatProjectDate(date: string): string {
   const [year, month, day] = date.split('-').map(Number);
   return `${year}年${month}月${day}日`;
 }
-
-export enum BlogCategory {
-  FRONTEND = '前端开发',
-  SHOPIFY = 'Shopify',
-  NOTES = '技术笔记'
-}
-
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  category: BlogCategory;
-  tags: string[];
-  date: string;
-  readTime: number;
-  coverGradient: string;
-  coverIcon: string;
-}

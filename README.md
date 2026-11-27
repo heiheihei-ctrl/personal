@@ -47,12 +47,12 @@ https://your-domain.com/?lang=en
 ```text
 App.tsx                  routes + layout
 i18n.tsx                 UI strings, language provider, date/category helpers
-en.ts                    English case studies and blog translations
+en.ts                    English case studies
 constants.tsx            project data (Chinese source)
 projectSummaries.ts      Chinese summary / implementation data
 types.ts                 shared types and enums
-pages/                   Home, About, Blog, BlogDetail, ProjectDetail
-components/              Navbar, Footer, ProjectCard, BlogCard, Carousel, ImageModal
+pages/                   Home, About, ProjectDetail
+components/              Navbar, Footer, ProjectCard, Carousel, ImageModal
 assets/                  screenshots (heavy PNGs converted to WebP)
 ```
 

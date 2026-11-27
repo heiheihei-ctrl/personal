@@ -8,12 +8,10 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: m.nav.work, path: '/' },
-    { name: m.nav.blog, path: '/blog' },
     { name: m.nav.about, path: '/about' },
   ];
 
-  const isActive = (path: string) =>
-    path === '/blog' ? location.pathname.startsWith('/blog') : location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="sticky top-0 z-50 bg-white/95 border-b border-blue-100 shadow-sm">
