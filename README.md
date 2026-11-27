@@ -1,20 +1,64 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# YY Studio — Portfolio
 
-# Run and deploy your AI Studio app
+Bilingual (中文 / English) portfolio for **Yingyi Qian (YY)**, a full-stack developer focused on **Shopify storefronts, WordPress / WooCommerce builds, bug fixing and AI agent / MCP integrations**.
 
-This contains everything you need to run your app locally.
+Live focus:
 
-View your app in AI Studio: https://ai.studio/apps/drive/1Tzsjdg8joSmRXeq69HDQeLoSs3733UC5
+- Shopify case studies first (Formade, ZiraSpark, ArmorLite, Bluebox Japan, POSE, Carve)
+- WordPress / WooCommerce positioned as a core service
+- 23 real projects across e-commerce, web apps, mini programs and H5
+- Full English version for international clients
 
-## Run Locally
+## Stack
 
-**Prerequisites:**  Node.js
+- React 19 + React Router 7
+- Vite 6
+- TailwindCSS (CDN)
+- TypeScript
 
+## Run locally
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+Production build:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Language switch
+
+- The site follows the browser language by default.
+- `?lang=en` forces English; `?lang=zh` forces Chinese.
+- The navbar toggle stores the choice in `localStorage['yy-lang']`.
+
+For Fiverr clients, share the English URL:
+
+```text
+https://your-domain.com/?lang=en
+```
+
+## Project structure
+
+```text
+App.tsx                  routes + layout
+i18n.tsx                 UI strings, language provider, date/category helpers
+en.ts                    English case studies and blog translations
+constants.tsx            project data (Chinese source)
+projectSummaries.ts      Chinese summary / implementation data
+types.ts                 shared types and enums
+pages/                   Home, About, Blog, BlogDetail, ProjectDetail
+components/              Navbar, Footer, ProjectCard, BlogCard, Carousel, ImageModal
+assets/                  screenshots (heavy PNGs converted to WebP)
+```
+
+To add a project, add an entry to `constants.tsx` + `projectSummaries.ts`, then its English version to `en.ts`.
+
+## Contact
+
+- Email: 19154916318@163.com
+- WeChat QR code: `assets/wechat-qr.png`

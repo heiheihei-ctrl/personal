@@ -1,26 +1,37 @@
-
 import React from 'react';
 import avatar from '../assets/avatar.jpg';
+import { useI18n } from '../i18n';
 
 const About: React.FC = () => {
+  const { m } = useI18n();
+  const about = m.about;
+
+  const withHighlight = (text: string, highlight: string) => {
+    if (!highlight || !text.includes(highlight)) return text;
+    const [before, after] = text.split(highlight);
+    return (
+      <>
+        {before}
+        <span className="text-blue-600 font-semibold">{highlight}</span>
+        {after}
+      </>
+    );
+  };
+
   return (
-    <main className="max-w-5xl mx-auto px-4 py-16 sm:py-24">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <main className="max-w-5xl mx-auto px-4 py-12 sm:py-16 lg:py-24 overflow-x-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         {/* Left Sidebar: Basic Info */}
         <div className="lg:col-span-4">
-          <div className="sticky top-24 space-y-8">
+          <div className="lg:sticky lg:top-24 space-y-8">
             <div className="mx-auto w-1/2 lg:w-full bg-white p-2 rounded-3xl shadow-xl shadow-blue-100/50 border border-blue-50 overflow-hidden">
-               <img 
-                src={avatar} 
-                alt="钱盈熠" 
-                className="w-full aspect-square object-cover rounded-2xl"
-              />
+              <img src={avatar} alt={about.name} className="w-full aspect-square object-cover rounded-2xl" />
             </div>
-            
+
             <div className="space-y-6 bg-white p-6 rounded-2xl border border-blue-50 shadow-sm">
               <div>
-                <h1 className="text-3xl font-extrabold text-slate-900">钱盈熠</h1>
-                <p className="text-blue-600 font-medium mt-1">全栈开发工程师</p>
+                <h1 className="text-3xl font-extrabold text-slate-900">{about.name}</h1>
+                <p className="text-blue-600 font-medium mt-1">{about.role}</p>
               </div>
 
               <div className="space-y-3">
@@ -39,34 +50,37 @@ const About: React.FC = () => {
               </div>
 
               <div className="pt-4 border-t border-slate-100">
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">技能证书</h3>
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">{about.certsTitle}</h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded">计算机程序设计员 三级</span>
-                  <span className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded">网络与信息安全管理员 三级</span>
+                  {about.certs.map((cert) => (
+                    <span key={cert} className="px-2 py-1 bg-slate-100 text-slate-600 text-[10px] font-bold rounded">
+                      {cert}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Right Content */}
         <div className="lg:col-span-8 space-y-12">
           {/* Summary */}
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
-              自我评价
+              {about.summaryTitle}
             </h2>
-            <div className="text-slate-600 leading-relaxed text-lg space-y-4">
-              <p>
-                💡 我是一名拥有三年实战经验的全栈开发工程师，具备从需求分析、技术选型到部署上线的全流程能力。
-              </p>
-              <p>
-                📚 我善于从各种资源中汲取知识，在工作之余积极探索 <span className="text-blue-600 font-semibold">大模型应用、Prompt 工程、AI Agent、RAG</span> 等 AI 应用相关技术。
-              </p>
-              <p>
-                🚀 我始终保持对新技术的好奇心，并乐于接受高挑战性的项目，追求代码质量与交互体验的完美平衡。
-              </p>
+            <div className="text-slate-600 leading-relaxed text-base sm:text-lg space-y-4">
+              {about.summary.map((paragraph, i) => (
+                <p key={i}>
+                  {paragraph.pre}
+                  {paragraph.highlight ? (
+                    <span className="text-blue-600 font-semibold">{paragraph.highlight}</span>
+                  ) : null}
+                  {paragraph.post}
+                </p>
+              ))}
             </div>
           </section>
 
@@ -74,51 +88,40 @@ const About: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-8 flex items-center">
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
-              工作经历
+              {about.experienceTitle}
             </h2>
             <div className="space-y-10">
-              <div className="relative pl-8 border-l-2 border-blue-100">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-600 border-4 border-white"></div>
-                <div className="flex flex-col md:flex-row md:justify-between mb-2">
-                  <h3 className="text-xl font-bold text-slate-900">天宫子午（深圳）科技有限公司</h3>
-                  <span className="text-blue-600 font-semibold">2026.06 - 至今</span>
+              {about.jobs.map((job, index) => (
+                <div key={job.company} className="relative pl-7 sm:pl-8 border-l-2 border-blue-100">
+                  <div
+                    className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full border-4 border-white ${
+                      index === 0 ? 'bg-blue-600' : 'bg-slate-300'
+                    }`}
+                  ></div>
+                  <div className="flex flex-col md:flex-row md:justify-between gap-1 mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900">{job.company}</h3>
+                    <span className={`${index === 0 ? 'text-blue-600' : 'text-slate-500'} font-semibold whitespace-nowrap`}>
+                      {job.period}
+                    </span>
+                  </div>
+                  <p className="text-slate-500 font-medium mb-3 italic">
+                    {job.role}
+                    {job.site ? (
+                      <>
+                        {' · '}
+                        <a href={job.site} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline not-italic">
+                          {job.site.replace('https://', '')}
+                        </a>
+                      </>
+                    ) : null}
+                  </p>
+                  <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
+                    {job.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="text-slate-500 font-medium mb-3 italic">全栈开发工程师</p>
-                <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
-                  <li>🌐 负责公司核心项目 <a href="https://tgtai.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">https://tgtai.com/</a> 的日常维护与功能迭代，保障网站稳定运行及用户体验优化</li>
-                  <li>⚡ 独立完成网站前端交互优化、页面性能调优及响应式适配，提升多终端访问兼容性</li>
-                  <li>🛠️ 根据业务需求，参与网站功能模块的设计与开发，完成从需求分析到上线部署的全流程</li>
-                  <li>🔒 持续跟进网站安全与运维工作，处理线上问题，确保系统高可用性</li>
-                </ul>
-              </div>
-
-              <div className="relative pl-8 border-l-2 border-blue-100">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
-                <div className="flex flex-col md:flex-row md:justify-between mb-2">
-                  <h3 className="text-xl font-bold text-slate-900">杭州一颗糯米网络科技有限公司</h3>
-                  <span className="text-slate-500 font-semibold">2025.06 - 2026.05</span>
-                </div>
-                <p className="text-slate-500 font-medium mb-3 italic">全栈开发工程师</p>
-                <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
-                  <li>🎯 主导 Shopify、WordPress 及自建站项目的全栈开发与定制</li>
-                  <li>🏗️ 独立设计技术方案，完成系统架构搭建，负责从零到一的完整交付</li>
-                  <li>🚀 全权负责项目从开发环境到生产环境部署上线的全流程自动化管理</li>
-                </ul>
-              </div>
-
-              <div className="relative pl-8 border-l-2 border-blue-100">
-                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
-                <div className="flex flex-col md:flex-row md:justify-between mb-2">
-                  <h3 className="text-xl font-bold text-slate-900">深圳市三合软件有限公司</h3>
-                  <span className="text-slate-500 font-semibold">2023.06 - 2025.05</span>
-                </div>
-                <p className="text-slate-500 font-medium mb-3 italic">前端开发工程师</p>
-                <ul className="list-disc list-inside text-slate-600 space-y-2 text-sm">
-                  <li>💻 负责公司核心项目的前端及部分后端接口开发，参与产品需求评审与系统设计</li>
-                  <li>📦 根据具体业务需求承担模块化开发任务，按计划高质量完成交付目标</li>
-                  <li>✅ 协助测试人员完成复杂业务逻辑下的系统测试，保障线上版本稳定性</li>
-                </ul>
-              </div>
+              ))}
             </div>
           </section>
 
@@ -126,22 +129,16 @@ const About: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
-              荣誉奖项
+              {about.awardsTitle}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                { title: '第六届“传智杯”全国大学生 Web 前端挑战赛', award: '全国一等奖', date: '2024.04' },
-                { title: '第五届“传智杯”全国大学生 Web 前端挑战赛', award: '全国优秀奖', date: '2023.05' },
-                { title: '湖南省职业院校技能大赛“移动应用开发”', award: '三等奖', date: '2023.03' },
-                { title: '湖南省第一届职业技能大赛“网站设计与开发”', award: '第四名', date: '2022.07' },
-                { title: '2021-2022 学年度', award: '国家奖学金', date: '2022' },
-              ].map((item, i) => (
-                <div key={i} className="bg-blue-50/50 p-4 rounded-xl border border-blue-100 flex justify-between items-center">
+              {about.awards.map((item) => (
+                <div key={item.title} className="bg-blue-50/50 p-4 rounded-xl border border-blue-100 flex justify-between items-center gap-4">
                   <div>
                     <h4 className="font-bold text-slate-800 text-sm">{item.title}</h4>
                     <p className="text-blue-600 text-xs font-bold mt-1">🏆 {item.award}</p>
                   </div>
-                  <span className="text-slate-400 text-[10px] font-medium ml-4">{item.date}</span>
+                  <span className="text-slate-400 text-[10px] font-medium whitespace-nowrap">{item.date}</span>
                 </div>
               ))}
             </div>
@@ -151,47 +148,33 @@ const About: React.FC = () => {
           <section>
             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
-              技术图谱
+              {about.skillsTitle}
             </h2>
             <div className="space-y-4">
               <div className="bg-white p-6 rounded-2xl border border-blue-50 shadow-sm space-y-4">
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800 mb-2">💻 前端核心 (Frontend Stack)</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    熟悉 HTML5/CSS3 (Flex, Grid)，深耕 Vue 2/3 及 React 生态。熟练应用 <span className="font-semibold">Tailwind CSS</span>、TypeScript。擅长使用 <span className="font-semibold">Lottie</span> 实现动效及前端性能优化（懒加载、节流防抖）。
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800 mb-2">⚙️ 后端与跨端 (Backend & Hybrid)</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    具备 PHP (Laravel) 及 Java (SpringBoot, MyBatis-Plus) 开发经验。熟悉 UniApp 跨端开发及 Shopify 独立站生态。
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-slate-800 mb-2">🔧 工程化与网络 (Engineering & Network)</h4>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    熟悉 Git 版本控制，了解计算机网络原理（HTTP, TCP/IP, HTTPS）及浏览器缓存机制、跨域解决方案。
-                  </p>
-                </div>
+                {about.skills.map((skill) => (
+                  <div key={skill.title}>
+                    <h4 className="text-sm font-bold text-slate-800 mb-2">{skill.title}</h4>
+                    <p className="text-sm text-slate-600 leading-relaxed">{withHighlight(skill.text, skill.highlight)}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
-          
+
           {/* Education */}
           <section>
-             <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
               <span className="w-8 h-1 bg-blue-600 mr-3"></span>
-              教育经历
+              {about.educationTitle}
             </h2>
             <div className="bg-white p-6 rounded-2xl border border-blue-50 shadow-sm space-y-4">
-               <div className="flex justify-between items-center">
-                  <span className="font-bold text-slate-800 text-base">🎓 国家开放大学</span>
-                  <span className="text-slate-500 text-sm">计算机网络技术</span>
-               </div>
-               <div className="flex justify-between items-center">
-                  <span className="font-bold text-slate-800 text-base">🎓 郴州技师学院 (预备技师班)</span>
-                  <span className="text-slate-500 text-sm">计算机网络技术</span>
-               </div>
+              {about.education.map((item) => (
+                <div key={item.school} className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                  <span className="font-bold text-slate-800 text-base">{item.school}</span>
+                  <span className="text-slate-500 text-sm">{item.major}</span>
+                </div>
+              ))}
             </div>
           </section>
         </div>

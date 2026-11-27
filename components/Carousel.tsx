@@ -76,9 +76,10 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
       >
         {images.map((img, idx) => {
           const isVideo = isVideoFile(img);
+          const isActive = idx === activeIndex;
           return (
             <div key={idx} className="min-w-full h-full flex items-center justify-center bg-slate-100 relative">
-              {isVideo ? (
+              {!isActive ? null : isVideo ? (
                 <video 
                   ref={(el) => {
                     videoRefs.current[idx] = el;
@@ -112,6 +113,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, isMobile = false, onImageCl
                 <img 
                   src={img} 
                   alt={`Slide ${idx}`} 
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-contain cursor-pointer"
                   onClick={() => handleImageClick(idx)}
                 />

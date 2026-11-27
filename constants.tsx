@@ -4,20 +4,20 @@ import { PROJECT_SUMMARIES } from './projectSummaries';
 import packagingCover from './assets/vibe-coding/packaging.svg';
 
 // 航小鹭小程序图片导入
-import cjh1 from './assets/xcx/cjh/1.jpg';
-import cjh2 from './assets/xcx/cjh/2.jpg';
+import cjh1 from './assets/xcx/cjh/1.webp';
+import cjh2 from './assets/xcx/cjh/2.webp';
 import cjh3 from './assets/xcx/cjh/3.jpg';
-import cjh4 from './assets/xcx/cjh/4.jpg';
+import cjh4 from './assets/xcx/cjh/4.webp';
 import cjh5 from './assets/xcx/cjh/5.png';
 import cjh6 from './assets/xcx/cjh/6.jpg';
 
-import hxl1 from './assets/xcx/hxl/微信图片_20251204150054_336_6.jpg';
+import hxl1 from './assets/xcx/hxl/微信图片_20251204150054_336_6.webp';
 import hxl2 from './assets/xcx/hxl/微信图片_20251204150056_337_6.jpg';
 import hxl3 from './assets/xcx/hxl/微信图片_20251204150058_338_6.jpg';
 import hxl4 from './assets/xcx/hxl/微信图片_20251204150100_339_6.jpg';
 import hxl5 from './assets/xcx/hxl/微信图片_20251204150101_340_6.jpg';
 import hxl6 from './assets/xcx/hxl/微信图片_20251204150102_341_6.jpg';
-import hxl7 from './assets/xcx/hxl/微信图片_20251204150133_342_6.jpg';
+import hxl7 from './assets/xcx/hxl/微信图片_20251204150133_342_6.webp';
 
 // 香后事小程序图片导入
 import xhs1 from './assets/xcx/xhs/微信图片_20250929000013_109_6.jpg';
@@ -49,31 +49,40 @@ import lxxd12 from './assets/xcx/lxxd/12.png';
 
 // Shopify 图片导入
 import formadeCover from './assets/shopify/formade/cover.webp';
-import formadeProduct from './assets/shopify/formade/product-full.png';
-import formadeCollection from './assets/shopify/formade/basketball-full.png';
-import formadeHome from './assets/shopify/formade/home-full.png';
-import carve1 from './assets/shopify/carve/1.png';
-import carve2 from './assets/shopify/carve/2.png';
-import carve3 from './assets/shopify/carve/3.png';
-import posefootwear1 from './assets/shopify/posefootwear/1.png';
-import posefootwear2 from './assets/shopify/posefootwear/2.png';
-import posefootwear3 from './assets/shopify/posefootwear/3.png';
-import bluebox1 from './assets/shopify/bluebox/1.png';
-import bluebox2 from './assets/shopify/bluebox/2.png';
+import formadeProduct from './assets/shopify/formade/product-full.webp';
+import formadeCollection from './assets/shopify/formade/basketball-full.webp';
+import formadeHome from './assets/shopify/formade/home-full.webp';
+import carve1 from './assets/shopify/carve/1.webp';
+import carve2 from './assets/shopify/carve/2.webp';
+import carve3 from './assets/shopify/carve/3.webp';
+import posefootwear1 from './assets/shopify/posefootwear/1.webp';
+import posefootwear2 from './assets/shopify/posefootwear/2.webp';
+import posefootwear3 from './assets/shopify/posefootwear/3.webp';
+import bluebox1 from './assets/shopify/bluebox/1.webp';
+import bluebox2 from './assets/shopify/bluebox/2.webp';
 import csfqFigma from './assets/shopify/csfq/cs-figma.png';
-import csfq1 from './assets/shopify/csfq/cs-1.png';
-import csfq2 from './assets/shopify/csfq/cs-2.png';
-import csfq3 from './assets/shopify/csfq/cs-3.png';
-import csfq4 from './assets/shopify/csfq/cs-4.png';
-import csfq5 from './assets/shopify/csfq/cs-5.png';
+import csfq1 from './assets/shopify/csfq/cs-1.webp';
+import csfq2 from './assets/shopify/csfq/cs-2.webp';
+import csfq3 from './assets/shopify/csfq/cs-3.webp';
+import csfq4 from './assets/shopify/csfq/cs-4.webp';
+import csfq5 from './assets/shopify/csfq/cs-5.webp';
+import armor1 from './assets/shopify/armorLite/1.webp';
+import armor2 from './assets/shopify/armorLite/2.webp';
+import armor3 from './assets/shopify/armorLite/3.webp';
+import armor4 from './assets/shopify/armorLite/4.webp';
+import armor5 from './assets/shopify/armorLite/5.webp';
+
+// MCP 工具集成图片
+import superboxMcp1 from './assets/mcp/superbox/1.png';
+import superboxMcp2 from './assets/mcp/superbox/2.png';
 
 // UI 设计图片导入
-import xypt1 from './assets/ui/xypt/A3-客户端.png';
+import xypt1 from './assets/ui/xypt/A3-客户端.webp';
 import xypt2 from './assets/ui/xypt/2.png';
 
 // Web 项目图片导入
-import tai1 from './assets/web/tai/1.png';
-import tai2 from './assets/web/tai/2.png';
+import tai1 from './assets/web/tai/1.webp';
+import tai2 from './assets/web/tai/2.webp';
 import tai3 from './assets/web/tai/3.png';
 import erp1 from './assets/web/erp/1.png';
 import erp2 from './assets/web/erp/2.png';
@@ -81,15 +90,15 @@ import xmglxt1 from './assets/web/xmglxt/1.png';
 import xmglxt2 from './assets/web/xmglxt/2.png';
 import xmglxt3 from './assets/web/xmglxt/3.png';
 import xmglxt4 from './assets/web/xmglxt/4.png';
-import zxjkxt1 from './assets/web/zxjkxt/1.jpg';
-import hfcjcxt1 from './assets/web/hfcjcxt/1.png';
+import zxjkxt1 from './assets/web/zxjkxt/1.webp';
+import hfcjcxt1 from './assets/web/hfcjcxt/1.webp';
 
 // MCP 工具集成项目图片
 
 // H5 图片导入
-import ffl1 from './assets/h5/hdyx/ffl1.jpg';
-import ffl2 from './assets/h5/hdyx/ffl2.jpg';
-import migong1 from './assets/h5/hdyx/migong.jpg';
+import ffl1 from './assets/h5/hdyx/ffl1.webp';
+import ffl2 from './assets/h5/hdyx/ffl2.webp';
+import migong1 from './assets/h5/hdyx/migong.webp';
 import yxt1 from './assets/h5/yxt/微信图片_20250429225031_495_7.jpg';
 import yxt2 from './assets/h5/yxt/微信图片_20250429225032_494_7.jpg';
 import yxt3 from './assets/h5/yxt/微信图片_20250429225033_493_7.jpg';
@@ -175,6 +184,16 @@ const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
     date: '2026-09-15'
   },
   {
+    id: 'armor-lite',
+    title: 'ArmorLite 防刺装备独立站',
+    description: '🛡️ ArmorLite 防刺 / 防护装备品牌的英文 Shopify 独立站，把技术型产品讲清楚，同时保持战术风格并让下单路径足够简单。\n\n🎨 视觉方向：\n• 深海军蓝底色搭配电光蓝强调色，使用战术摄影与技术图解\n• 把产品教育放进页面：防护等级、纳米编织结构、FAQ\n• 每个商品都提供清晰的尺码、颜色与组合选择\n\n🛍️ 页面与功能：\n• 首页包含主视觉、防护等级说明、商品展示、技术区块与 FAQ\n• 分类页支持库存、价格与商品类型筛选\n• 商品卡展示颜色变体、价格、角标与加购入口\n• 礼品卡、运输保障与定制服务作为独立 SKU\n• 配置多币种与多语言店铺\n\n🎯 项目价值：让一个小众防护产品既能被看懂，也能被顺利买走。',
+    category: ProjectCategory.SHOPIFY,
+    images: [armor1, armor2, armor3, armor4, armor5],
+    link: 'https://armorlite.co/',
+    tags: ['Shopify', 'Liquid', '产品教育', '分类筛选', '多币种'],
+    date: '2026-07-08'
+  },
+  {
     id: 'tai',
     title: 'TAI 天宫·神匠 AI 创意与协同工作流平台',
     description: 'TAI 天宫·神匠是一款面向建筑设计、教育培训与创意设计场景的 AI 创意平台，以可视化节点画布连接文字提示、参考图片和 AI 生成模型，让用户在同一个工作流中组织素材、探索方案并持续细化创作成果。\n\n开发周期与个人职责：\n自 2026 年 6 月起由我独立负责整个项目的开发与迭代，持续推进核心创作功能和企业版协同能力，至今仍在持续开发中。\n\n核心功能：\n• 可视化工作流：通过节点与连线组合提示词、图片素材及生成任务，支持分支创作和生成结果的后续引用，形成连续的创作流程\n• 多模型图片生成：集成 Nano banana、Seedream 等模型，支持文生图、图生图，并可选择模型档位、画面比例与输出分辨率，在节点内直接预览生成结果\n• 建筑方案创作：结合手绘草图、用地红线和文字需求生成建筑效果图，进一步拓展鸟瞰总平面、入口人视角、连廊等场景，以及平面图、立面图和剖面图等方案表达\n• 画布操作与项目组织：提供项目切换与创建入口，配合画布缩放、缩略地图、文字、绘图和图层等工具，方便整理复杂工作流与设计素材\n• 平台服务入口：提供中英文切换、会员权益、积分展示、邀请码及企业版入口，满足个人创作与企业使用场景\n\n企业版多人协同：\n支持多名成员在同一个工作流画布中共同办公，通过成员头像与协作光标感知其他参与者的位置，围绕同一套素材、节点和生成结果协同开展创作与方案迭代。\n\n项目价值：\n将分散的 AI 图片生成操作组织为可视化、可衔接的工作流，帮助设计人员从创意输入推进到多视图方案表达，并通过企业版协同能力支持团队共同完成创作任务。',
@@ -183,6 +202,16 @@ const PROJECT_DATA: Omit<Project, 'summary' | 'implementation'>[] = [
     link: 'https://tgtai.com/',
     tags: ['AI 图片生成', '可视化工作流', '建筑设计', '多人协同', '独立开发'],
     date: '2026-10-10'
+  },
+  {
+    id: 'superbox-mcp',
+    title: 'SuperBox MCP · 业务数据 AI 工具连接器',
+    description: '把 SuperBox 的业务能力封装成 MCP 工具，让 AI 助手可以直接查询和分析业务数据，而不是把数据复制到聊天窗口里。\n\n核心工作：\n• 将订单、门店与报表接口封装为 8 个标准化 MCP 工具\n• 处理鉴权、参数校验与错误返回\n• 输出结构化数据，方便助手总结、绘图与解释\n• 通过一份配置接入任意兼容 MCP 的客户端\n\n使用示例：\n在助手内输入「查一下光明店上个月的订单并分析趋势」，即可返回订单量、状态分布和环比图表。\n\n项目价值：不额外开发聊天机器人，也能把内部业务数据变成对话式入口。',
+    category: ProjectCategory.AI,
+    images: [superboxMcp1, superboxMcp2],
+    link: '#',
+    tags: ['MCP', 'AI 工具', 'Node.js', '接口集成', '数据分析'],
+    date: '2026-11-24'
   },
   {
     id: 'erp-system',
